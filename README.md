@@ -12,3 +12,5 @@ created with ❤️ by SBG
 
 
 -----------------------------------
+
+Thanks for watching 🙏❤️

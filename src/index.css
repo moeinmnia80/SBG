@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/****** scrollbar ******/
+    /* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+    /* Track */
+::-webkit-scrollbar-track {
+    background: #eee;
+}
+    /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #BABBC4;
+}
+    /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0BBDBA;
+}
+/***** finished scrollbar *****/
+
+
+.side-text {
+    writing-mode: vertical-rl;
+}
+.side-icon{
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+}
+
+@keyframes fadeUp {
+    0%{
+        opacity: 0;
+        /*transform: translateY(-50px);*/
+    }
+    100%{
+        opacity: 1;
+        /*transform: translateY(0);*/
+    }
+}

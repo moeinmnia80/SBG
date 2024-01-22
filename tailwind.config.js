@@ -5,7 +5,7 @@ export default {
   theme: {
     container: {
       screens: {
-        sm: "350px",
+        sm: "450px",
         md: "650px",
         lg: "900px",
         xl: "1100px",
@@ -19,6 +19,12 @@ export default {
       },
       backgroundImage: {},
       colors: {},
+      backgroundSize: {
+        500: `500%`,
+      },
+      animation: {
+        fadeUp: `fadeUp 1.5s linear`,
+      },
     },
   },
   plugins: [],

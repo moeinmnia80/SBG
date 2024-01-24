@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import ribbonImage from "./src/assets/images/ribbon-text.png";
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
@@ -17,13 +19,16 @@ export default {
       fontFamily: {
         sans: ["IranSansX"],
       },
-      backgroundImage: {},
+      backgroundImage: {
+        ribbon: `url(./src/assets/images/ribbon-text.png)`,
+      },
       colors: {},
       backgroundSize: {
-        500: `500%`,
+        500: "500%",
       },
       animation: {
         fadeUp: `fadeUp 1.5s linear`,
+        loadingBar: `loadingBar 80s linear infinite`,
       },
     },
   },

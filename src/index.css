@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+::selection{
+    color: white;
+    background-color: #0BBDBA;
+}
 /****** scrollbar ******/
     /* width */
 ::-webkit-scrollbar {
@@ -31,13 +35,37 @@
     writing-mode: vertical-lr;
 }
 
+.full-screen-section {
+    height: 100vh;
+    position: relative;
+}
+
+.not-show{
+    opacity: 0;
+    transition: all 3s;
+    position: relative;
+    left: -100%;
+}
+.show{
+    animation: fadeUp 3s linear;
+    left: 0;
+    opacity: 1;
+}
+
 @keyframes fadeUp {
     0%{
         opacity: 0;
-        /*transform: translateY(-50px);*/
     }
     100%{
         opacity: 1;
-        /*transform: translateY(0);*/
+    }
+}
+
+@keyframes loadingBar {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 500% 0;
     }
 }

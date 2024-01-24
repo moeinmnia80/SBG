@@ -17,13 +17,13 @@ export const Description = () => {
       </div>
       <BlueBlobIcon style={`absolute top-0 left-0 w-full h-full -z-50`} />
       <div
-        className={`absolute left-0 top-1/2 -translate-y-1/2 text-sm \
+        className={`absolute left-6 sm:left-0 top-1/2 -translate-y-1/2 text-sm \
         text-gray-400 side-text`}
       >
         front-end developer - SBG
       </div>
       <div
-        className={`absolute right-0 top-1/2 -translate-y-1/2 side-icon flex gap-4`}
+        className={`absolute right-6 sm:right-0 top-1/2 -translate-y-1/2 side-icon flex gap-4`}
       >
         <Link
           to={`https://www.instagram.com/scorpionbitesgroup`}

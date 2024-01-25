@@ -11,7 +11,10 @@ export const AboutUs = () => {
 
   return (
     <>
-      <div className={`container full-screen-section mt-24 pt-4 px-4`}>
+      <div
+        className={`container full-screen-section mt-24 pt-4 px-4`}
+        id={`aboutus`}
+      >
         <div className={`flex flex-col text-center`}>
           <div>
             <div className={`not-show flex justify-center px-8 sm:p-0`}>

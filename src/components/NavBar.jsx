@@ -4,7 +4,7 @@ import logo from "../assets/images/logo.png";
 import { SunIcon } from "../assets/icons/SunIcon.jsx";
 import { MoonIcon } from "../assets/icons/MoonIcon.jsx";
 import { Link } from "react-router-dom";
-import { tabHandler } from "../helpers/helpers.js";
+import { scrollHandler, tabHandler } from "../helpers/helpers.js";
 import { useDispatch, useSelector } from "react-redux";
 import { changeTheme } from "../features/theme/themeSlice.js";
 import { ThemeButton } from "./ThemeButton.jsx";
@@ -36,6 +36,14 @@ export const NavBar = () => {
     }
     prevScrollpos = currentScrollPos;
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => scrollHandler(setTopic));
+
+    return () => {
+      window.removeEventListener("scroll", () => scrollHandler(setTopic));
+    };
+  }, [window.scrollY]);
 
   // set topic - NavBar items active mode
   const topicHandler = (e) => {
@@ -83,7 +91,6 @@ export const NavBar = () => {
               key={item.id}
               className={`grid place-items-center w-20 h-8 font-bold rounded-full\ 
               hover:text-black transition-all duration-500 cursor-pointer gap-4 `}
-              id={item.id}
               onClick={(e) => topicHandler(e)}
             >
               {item.name}

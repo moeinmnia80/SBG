@@ -22,4 +22,18 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 });
-export { tabHandler, observer };
+
+const scrollHandler = (setTopic) => {
+  let y = window.scrollY;
+  let home = document.getElementById("home").offsetTop;
+  let aboutUs = document.getElementById("aboutus").offsetTop;
+  let offset = 400; //px
+  //console.log(i1,i2,i3,i4,x);
+  if (y > home - offset && y < aboutUs) {
+    setTopic("home");
+  }
+  if (y > aboutUs - offset) {
+    setTopic("about us");
+  }
+};
+export { tabHandler, observer, scrollHandler };

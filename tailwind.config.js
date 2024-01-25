@@ -19,7 +19,7 @@ export default {
         sans: ["IranSansX"],
       },
       backgroundImage: {
-        ribbon: `url("./src/assets/images/ribbon.png")`,
+        ribbon: `url("ribbon.png")`,
       },
       colors: {},
       backgroundSize: {

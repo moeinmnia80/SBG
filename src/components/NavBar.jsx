@@ -5,7 +5,7 @@ import { SunIcon } from "../assets/icons/SunIcon.jsx";
 import { MoonIcon } from "../assets/icons/MoonIcon.jsx";
 import { Link } from "react-router-dom";
 import { tabHandler } from "../helpers/helpers.js";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { changeTheme } from "../features/theme/themeSlice.js";
 import { ThemeButton } from "./ThemeButton.jsx";
 
@@ -14,12 +14,17 @@ export const NavBar = () => {
   const [isDark, setIsDark] = useState(false);
   const [isShow, setIsShow] = useState(false);
   const nav = useRef();
+  const theme = useSelector((store) => store.theme.theme);
   const dispatch = useDispatch();
 
   useEffect(() => {
     setIsShow(true);
     setTopic("home");
   }, []);
+
+  useEffect(() => {
+    theme === "dark" ? setIsDark(true) : setIsDark(false);
+  }, [theme]);
 
   let prevScrollpos = window.scrollY;
   window.onscroll = function () {
@@ -38,13 +43,11 @@ export const NavBar = () => {
     setTopic(value);
   };
   // change theme
-  const themeSwitchHandler = (event) => {
+  const themeSwitchHandler = () => {
     setIsDark((isDark) => !isDark);
     if (isDark) {
-      localStorage.setItem("theme", "light");
       dispatch(changeTheme("light"));
     } else {
-      localStorage.setItem("theme", "dark");
       dispatch(changeTheme("dark"));
     }
   };

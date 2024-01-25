@@ -19,9 +19,7 @@ export default {
       fontFamily: {
         sans: ["IranSansX"],
       },
-      backgroundImage: {
-        ribbon: `url("./src/assets/images/ribbon.png")`,
-      },
+      backgroundImage: {},
       colors: {},
       backgroundSize: {
         500: "500%",

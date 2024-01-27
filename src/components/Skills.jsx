@@ -38,58 +38,75 @@ export const Skills = () => {
         className={`flex flex-wrap items-center justify-center gap-6 w-full px-7 mt-12 not-show`}
       >
         <IoLogoHtml5
-          className={`w-8 h-max transition-all duration-300 hover:text-orange-500`}
+          className={`w-8 h-max transition-all duration-300 hover:text-orange-500 \
+           dark:text-[#eee] dark:hover:text-orange-500`}
         />
         <FaCss3Alt
-          className={`w-8 h-max transition-all duration-300 hover:text-blue-500`}
+          className={`w-8 h-max transition-all duration-300 hover:text-blue-500 \
+           dark:text-[#eee] dark:hover:text-blue-500`}
         />
         <SiJavascript
-          className={`w-8 h-max transition-all duration-300 hover:text-yellow-500`}
+          className={`w-8 h-max transition-all duration-300 hover:text-yellow-500 \
+           dark:text-[#eee] dark:hover:text-yellow-500`}
         />
         <FaGitAlt
-          className={`w-8 h-max transition-all duration-300 hover:text-red-500`}
+          className={`w-8 h-max transition-all duration-300 hover:text-red-500 \
+           dark:text-[#eee] dark:hover:text-red-500`}
         />
         <FaGithub
-          className={`w-8 h-max transition-all duration-300 hover:text-purple-500`}
+          className={`w-8 h-max transition-all duration-300 hover:text-purple-500 \
+           dark:text-[#eee] dark:hover:text-purple-500`}
         />
         <TbBrandNpm
-          className={`w-8 h-max transition-all duration-300 hover:text-red-500`}
+          className={`w-8 h-max transition-all duration-300 hover:text-red-500 \
+           dark:text-[#eee] dark:hover:text-red-500`}
         />
         <FaSass
-          className={`w-8 h-max transition-all duration-300 hover:text-pink-500`}
+          className={`w-8 h-max transition-all duration-300 hover:text-pink-500 \
+           dark:text-[#eee] dark:hover:text-pink-500`}
         />
         <FaReact
-          className={`w-8 h-max transition-all duration-300 hover:text-blue-400`}
+          className={`w-8 h-max transition-all duration-300 hover:text-blue-400 \
+           dark:text-[#eee] dark:hover:text-blue-400`}
         />
         <SiVite
-          className={`w-8 h-max transition-all duration-300 hover:text-purple-500`}
+          className={`w-8 h-max transition-all duration-300 hover:text-purple-500 \
+           dark:text-[#eee] dark:hover:text-purple-500`}
         />
         <GrGraphQl
-          className={`w-8 h-max transition-all duration-300 hover:text-purple-800`}
+          className={`w-8 h-max transition-all duration-300 hover:text-purple-800 \
+           dark:text-[#eee] dark:hover:text-purple-800`}
         />
         <SiApollographql
-          className={`w-8 h-max transition-all duration-300 hover:text-yellow-500`}
+          className={`w-8 h-max transition-all duration-300 hover:text-yellow-500 \
+           dark:text-[#eee] dark:hover:text-yellow-500`}
         />
         <SiRedux
-          className={`w-8 h-max transition-all duration-300 hover:text-purple-700`}
+          className={`w-8 h-max transition-all duration-300 hover:text-purple-700 \
+           dark:text-[#eee] dark:hover:text-purple-700`}
         />
         <SiTailwindcss
-          className={`w-8 h-max transition-all duration-300 hover:text-blue-500`}
+          className={`w-8 h-max transition-all duration-300 hover:text-blue-500 \
+           dark:text-[#eee] dark:hover:text-blue-500`}
         />
         <SiPwa
-          className={`w-8 h-max transition-all duration-300 hover:text-purple-900`}
+          className={`w-8 h-max transition-all duration-300 hover:text-purple-900 \
+           dark:text-[#eee] dark:hover:text-purple-900`}
         />
-        <SiNextdotjs className={`w-8 h-max`} />
+        <SiNextdotjs className={`w-8 h-max dark:text-[#eee]`} />
         <SiTypescript
-          className={`w-8 h-max transition-all duration-300 hover:text-blue-600`}
+          className={`w-8 h-max transition-all duration-300 hover:text-blue-600 \
+           dark:text-[#eee] dark:hover:text-blue-600`}
         />
         <SiMui
-          className={`w-8 h-max transition-all duration-300 hover:text-blue-600`}
+          className={`w-8 h-max transition-all duration-300 hover:text-blue-600 \
+           dark:text-[#eee] dark:hover:text-blue-600`}
         />
-        <PiFramerLogoFill className={`w-8 h-max`} />
-        <SiThreedotjs className={`w-8 h-max`} />
+        <PiFramerLogoFill className={`w-8 h-max dark:text-[#eee]`} />
+        <SiThreedotjs className={`w-8 h-max dark:text-[#eee]`} />
         <FaGitlab
-          className={`w-8 h-max transition-all duration-300 hover:text-orange-600`}
+          className={`w-8 h-max transition-all duration-300 hover:text-orange-600 \
+           dark:text-[#eee] dark:hover:text-orange-600`}
         />
       </div>
     </>

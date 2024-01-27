@@ -4,8 +4,8 @@
 
 
 ::selection{
-    color: white;
-    background-color: #0BBDBA;
+    color: black;
+    background-color: #eee;
 }
 /****** scrollbar ******/
     /* width */
@@ -36,7 +36,6 @@
 }
 
 .full-screen-section {
-    height: 100vh;
     position: relative;
 }
 
@@ -54,6 +53,16 @@
 
 .active{
     background-color: orange;
+}
+.portfolio{
+    width: 25%;
+}
+.portfolio-show{
+    animation: fadeUp 2s linear 2s;
+}
+
+@keyframes anime {
+    0%{}
 }
 
 @keyframes fadeUp {

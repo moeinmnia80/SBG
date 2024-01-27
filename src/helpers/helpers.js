@@ -23,17 +23,31 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
+const observerFadeUp = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("portfolio-show");
+    } else {
+      entry.target.classList.remove("portfolio-show");
+    }
+  });
+});
+
 const scrollHandler = (setTopic) => {
   let y = window.scrollY;
-  let home = document.getElementById("home").offsetTop;
-  let aboutUs = document.getElementById("aboutus").offsetTop;
-  let offset = 400; //px
+  const home = document.getElementById("home").offsetTop;
+  const aboutUs = document.getElementById("aboutus").offsetTop;
+  const portfolio = document.getElementById("portfolio").offsetTop;
+  const offset = 400; //px
   //console.log(i1,i2,i3,i4,x);
   if (y > home - offset && y < aboutUs) {
     setTopic("home");
   }
-  if (y > aboutUs - offset) {
+  if (y > aboutUs - offset && y < portfolio) {
     setTopic("about us");
   }
+  if (y > portfolio - offset) {
+    setTopic("portfolio");
+  }
 };
-export { tabHandler, observer, scrollHandler };
+export { tabHandler, observer, scrollHandler, observerFadeUp };

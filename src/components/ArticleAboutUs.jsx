@@ -10,33 +10,40 @@ export const ArticleAboutUs = () => {
       >
         <article
           className={`not-show w-full h-full border-[1px] border-black rounded-md \
-                2xl:col-start-2 2xl:col-end-3 overflow-hidden`}
+                2xl:col-start-2 2xl:col-end-3 dark:border-l-[#1EEB31]  \ 
+                dark:border-b-[#1EEB31] dark:border-r-[#AEFF02]`}
         >
           <h2
-            className={`text-white bg-black font-bold text-2xl p-4 md:p-4 \ 
-                 border-b-[1px] border-black`}
+            className={`relative text-white bg-gradient-to-r from-[#1EEB31] to-[#AEFF02] font-bold text-2xl p-4 md:p-4 \ 
+                  rounded-tr-md rounded-tl-md border-b-[1px] border-black`}
           >
             At a Glance
           </h2>
-          <p className={`text-black text-sm p-4 md:p-4 text-justify`}>
+          <p
+            className={`relative text-black text-sm p-4 md:p-4 text-justify dark:text-white`}
+          >
             We are an experienced group of developers specializing in Front-End
-            development. From expertise in HTML, CSS, and JavaScript to
-            proficiency in popular frameworks like React.js and Vue.js, we have
+            development. From expertise in{" "}
+            <strong>HTML, CSS, and JavaScript</strong> to proficiency in popular
+            frameworks like <strong>React.js and Vue.js</strong>, we have
             successfully delivered projects with high standards and diverse
             designs.
           </p>
         </article>
         <article
           className={`not-show w-full h-full border-[1px] border-black rounded-md \
-               2xl:col-start-3 2xl:col-end-4 overflow-hidden`}
+               2xl:col-start-3 2xl:col-end-4 overflow-hidden dark:border-l-[#eebd89]  \ 
+                dark:border-b-[#eebd89] dark:border-r-[#da3abd]`}
         >
           <h2
-            className={` text-white bg-black font-bold text-2xl p-4 md:p-4 \
+            className={` text-white bg-gradient-to-r from-[#eebd89] to-[#da3abd] font-bold text-2xl p-4 md:p-4 \
                   border-b-[1px] border-black`}
           >
             SBG Values
           </h2>
-          <p className={`text-black text-sm p-4 md:p-4 text-justify`}>
+          <p
+            className={`text-black text-sm p-4 md:p-4 text-justify dark:text-white`}
+          >
             At SBG, we focus on enhancing the user experience. With an
             innovative approach and the use of advanced technologies, our goal
             is to create programs and websites that not only run on any device
@@ -45,15 +52,18 @@ export const ArticleAboutUs = () => {
         </article>
         <article
           className={`not-show w-full h-full border-[1px] border-black rounded-md \
-              2xl:col-start-4 2xl:col-end-5 overflow-hidden`}
+              2xl:col-start-4 2xl:col-end-5 overflow-hidden dark:border-l-[#9600ff]  \ 
+                dark:border-b-[#9600ff] dark:border-r-[#AEbaf8]`}
         >
           <h2
-            className={` text-white bg-black font-bold text-2xl p-4 md:p-4 \
+            className={` text-white bg-gradient-to-r from-[#9600ff] to-[#AEbaf8] font-bold text-2xl p-4 md:p-4 \
                 border-b-[1px] border-black `}
           >
             Contacting SBG
           </h2>
-          <p className={` text-black text-sm p-4 md:p-4 text-justify`}>
+          <p
+            className={` text-black text-sm p-4 md:p-4 text-justify dark:text-white`}
+          >
             If you have any questions or suggestions, we would be delighted to
             hear from you through our contact section. We love brainstorming and
             collaborating with you on new projects.

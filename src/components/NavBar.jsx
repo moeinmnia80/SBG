@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import menu from "../constants/menuItems.js";
 import logo from "../assets/images/logo.png";
-import { SunIcon } from "../assets/icons/SunIcon.jsx";
-import { MoonIcon } from "../assets/icons/MoonIcon.jsx";
+import logoDark from "../assets/images/logodark.png";
 import { Link } from "react-router-dom";
 import { scrollHandler, tabHandler } from "../helpers/helpers.js";
 import { useDispatch, useSelector } from "react-redux";
@@ -25,7 +24,6 @@ export const NavBar = () => {
   useEffect(() => {
     theme === "dark" ? setIsDark(true) : setIsDark(false);
   }, [theme]);
-
   let prevScrollpos = window.scrollY;
   window.onscroll = function () {
     const currentScrollPos = window.scrollY;
@@ -36,14 +34,13 @@ export const NavBar = () => {
     }
     prevScrollpos = currentScrollPos;
   };
-
   useEffect(() => {
     window.addEventListener("scroll", () => scrollHandler(setTopic));
 
     return () => {
       window.removeEventListener("scroll", () => scrollHandler(setTopic));
     };
-  }, [window.scrollY]);
+  }, []);
 
   // set topic - NavBar items active mode
   const topicHandler = (e) => {
@@ -64,18 +61,22 @@ export const NavBar = () => {
     <nav
       className={`fixed top-0 w-full h-max bg-white ${
         isShow ? `` : `-translate-y-full`
-      } transition-all duration-1000 z-50`}
+      } transition-all duration-1000 z-50 dark:bg-[#1a1a1d]`}
       ref={nav}
     >
       <div
-        className={`container flex justify-between items-center pr-6 sm:p-0`}
+        className={`container flex justify-between items-center pr-6 sm:p-0 dark:text-white`}
       >
         <Link
           to={`/`}
           className={`w-16 h-16 object-cover hover:scale-110 hover:rotate-180 transition-all \
            duration-500`}
         >
-          <img src={logo} alt="logo" className={`w-full h-full`} />
+          {theme === "light" ? (
+            <img src={logo} alt="logo" className={`w-full h-full`} />
+          ) : (
+            <img src={logoDark} alt="logo" className={`w-full h-full`} />
+          )}
         </Link>
         <ul
           className={`relative hidden md:flex items-center justify-center w-max h-12 text-sm`}
@@ -84,13 +85,15 @@ export const NavBar = () => {
             className={`absolute ${tabHandler(
               topic,
             )} w-[calc(100%/5)] h-8 -z-50  shadow-sm\
-             bg-gradient-to-r from-[#1EEB31] to-[#AEFF02] rounded-full transition-all duration-500`}
+             bg-gradient-to-r from-[#1EEB31] to-[#AEFF02] \ 
+             dark:bg-gradient-to-br dark:from-[#A00000] dark:to-[#C62128] \
+             rounded-full transition-all duration-500`}
           ></span>
           {menu.map((item) => (
             <li
               key={item.id}
               className={`grid place-items-center w-20 h-8 font-bold rounded-full\ 
-              hover:text-black transition-all duration-500 cursor-pointer gap-4 `}
+              hover:text-black dark:text-white transition-all duration-500 cursor-pointer gap-4 `}
               onClick={(e) => topicHandler(e)}
             >
               {item.name}

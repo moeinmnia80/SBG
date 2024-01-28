@@ -39,7 +39,6 @@ const scrollHandler = (setTopic) => {
   const aboutUs = document.getElementById("aboutus").offsetTop;
   const portfolio = document.getElementById("portfolio").offsetTop;
   const offset = 400; //px
-  //console.log(i1,i2,i3,i4,x);
   if (y > home - offset && y < aboutUs) {
     setTopic("home");
   }
@@ -50,4 +49,15 @@ const scrollHandler = (setTopic) => {
     setTopic("portfolio");
   }
 };
-export { tabHandler, observer, scrollHandler, observerFadeUp };
+
+const scrollVar = () => {
+  const htmlElement = document.documentElement;
+  const percentOfScreenHeightScrolled =
+    htmlElement.scrollTop / htmlElement.clientHeight;
+  htmlElement.style.setProperty(
+    "--scroll",
+    Math.min(percentOfScreenHeightScrolled * 100, 100),
+  );
+  console.log(Math.min(percentOfScreenHeightScrolled * 100, 100));
+};
+export { tabHandler, observer, scrollHandler, observerFadeUp, scrollVar };

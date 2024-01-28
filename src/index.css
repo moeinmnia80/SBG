@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --scroll: 0;
+}
 
 ::selection{
     color: black;
@@ -50,21 +53,35 @@
     left: 0;
     opacity: 1;
 }
-
+.showed{
+    left: 0;
+}
 .active{
     background-color: orange;
 }
 .portfolio{
-    width: 25%;
+    width: 15%;
+    transform: translateY(200%);
+    opacity: 0;
+    transition: all .5s;
 }
 .portfolio-show{
-    animation: fadeUp 2s linear 2s;
+    opacity: 1;
+    animation: toUp 2s linear;
+    transform: translateY(0);
 }
 
-@keyframes anime {
-    0%{}
+/* animates */
+@keyframes toUp {
+    0%{
+        transform: translateY(200%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
-
 @keyframes fadeUp {
     0%{
         opacity: 0;
@@ -73,7 +90,6 @@
         opacity: 1;
     }
 }
-
 @keyframes loadingBar {
     0%{
         background-position: 0 0;

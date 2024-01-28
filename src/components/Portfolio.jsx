@@ -1,6 +1,7 @@
 import portfolioImg from "../assets/images/portfolio.png";
 import { observerFadeUp } from "../helpers/helpers.js";
 import { useEffect } from "react";
+import portfolioItems from "../constants/portfolioItems.js";
 import { Link } from "react-router-dom";
 export const Portfolio = () => {
   useEffect(() => {

@@ -1,7 +1,6 @@
 import portfolioImg from "../assets/images/portfolio.png";
 import { observerFadeUp } from "../helpers/helpers.js";
 import { useEffect } from "react";
-import portfolioItems from "../constants/portfolioItems.js";
 import { Link } from "react-router-dom";
 export const Portfolio = () => {
   useEffect(() => {
@@ -29,15 +28,15 @@ export const Portfolio = () => {
           ></span>
         </div>
         <div className={`container w-full h-3/4 py-4`}>
-          {portfolioItems.map((item) => (
-            <Link to={item.link} key={item.id} className={`w-64 h-72`}>
-              <img
-                src={item.img}
-                alt="project image"
-                className={`w-full h-full object-cover`}
-              />
-            </Link>
-          ))}
+          {/*{portfolioItems.map((item) => (*/}
+          {/*  <Link to={item.link} key={item.id} className={`w-64 h-72`}>*/}
+          {/*    <img*/}
+          {/*      src={item.img}*/}
+          {/*      alt="project image"*/}
+          {/*      className={`w-full h-full object-cover`}*/}
+          {/*    />*/}
+          {/*  </Link>*/}
+          {/*))}*/}
         </div>
       </div>
     </>

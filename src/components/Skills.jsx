@@ -29,13 +29,13 @@ export const Skills = () => {
     <>
       <div className={`not-show flex justify-center w-full h-16 mt-8`}>
         <img
-          src={img2}
+          src={`${img2}`}
           alt="skills"
           className={`w-max h-full object-contain`}
         />
       </div>
       <div
-        className={`flex flex-wrap items-center justify-center gap-6 w-full px-7 mt-12 not-show`}
+        className={`flex flex-wrap items-center justify-center gap-6 w-full px-7 mt-12 mb-8 not-show`}
       >
         <IoLogoHtml5
           className={`w-8 h-max transition-all duration-300 hover:text-orange-500 \

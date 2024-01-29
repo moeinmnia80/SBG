@@ -6,7 +6,7 @@ export const Home = () => {
     <>
       <div
         id={`home`}
-        className={`container full-screen-section h-screen overflow-hidden flex flex-col items-center \
+        className={`container h-screen overflow-hidden flex flex-col items-center \
         justify-center`}
       >
         <NavBar />

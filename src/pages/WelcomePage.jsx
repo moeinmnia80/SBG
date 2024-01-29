@@ -11,15 +11,6 @@ export const WelcomePage = () => {
   useEffect(() => {
     themeValidation();
   }, [theme]);
-  useEffect(() => {
-    window.addEventListener("scroll", scrollVar);
-    window.addEventListener("resize", scrollVar);
-
-    return () => {
-      window.removeEventListener("scroll", scrollVar);
-      window.removeEventListener("resize", scrollVar);
-    };
-  }, []);
   return (
     <section className={`dark:bg-[#1a1a1d]`}>
       <Home />

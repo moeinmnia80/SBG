@@ -7,10 +7,13 @@ import { scrollHandler, tabHandler } from "../helpers/helpers.js";
 import { useDispatch, useSelector } from "react-redux";
 import { changeTheme } from "../features/theme/themeSlice.js";
 import { ThemeButton } from "./ThemeButton.jsx";
+import { BarsIcon } from "../assets/icons/BarsIcon.jsx";
+import { CrossIcon } from "../assets/icons/CrossIcon.jsx";
 
 export const NavBar = () => {
   const [topic, setTopic] = useState("");
   const [isDark, setIsDark] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [isShow, setIsShow] = useState(false);
   const nav = useRef();
   const theme = useSelector((store) => store.theme.theme);
@@ -65,7 +68,7 @@ export const NavBar = () => {
       ref={nav}
     >
       <div
-        className={`container flex justify-between items-center pr-6 sm:p-0 dark:text-white`}
+        className={`container flex justify-between items-center dark:text-white`}
       >
         <Link
           to={`/`}
@@ -100,7 +103,18 @@ export const NavBar = () => {
             </li>
           ))}
         </ul>
-        <ThemeButton isDark={isDark} themeSwitchHandler={themeSwitchHandler} />
+        <div className={`flex w-max h-full`}>
+          <button
+            className={`relative w-6 h-6 sm:hidden`}
+            onClick={() => setIsOpen((isOpen) => !isOpen)}
+          >
+            <BarsIcon style={`w-6 h-6 text-black`} />
+          </button>
+          <ThemeButton
+            isDark={isDark}
+            themeSwitchHandler={themeSwitchHandler}
+          />
+        </div>
       </div>
     </nav>
   );

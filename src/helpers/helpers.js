@@ -33,6 +33,16 @@ const observerFadeUp = new IntersectionObserver((entries) => {
   });
 });
 
+const observerWin = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("window-show");
+    } else {
+      entry.target.classList.remove("window-show");
+    }
+  });
+});
+
 const scrollHandler = (setTopic) => {
   let y = window.scrollY;
   const home = document.getElementById("home").offsetTop;
@@ -58,6 +68,13 @@ const scrollVar = () => {
     "--scroll",
     Math.min(percentOfScreenHeightScrolled * 100, 100),
   );
-  console.log(Math.min(percentOfScreenHeightScrolled * 100, 100));
 };
-export { tabHandler, observer, scrollHandler, observerFadeUp, scrollVar };
+
+export {
+  tabHandler,
+  observer,
+  scrollHandler,
+  observerFadeUp,
+  scrollVar,
+  observerWin,
+};

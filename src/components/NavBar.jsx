@@ -93,14 +93,15 @@ export const NavBar = () => {
              rounded-full transition-all duration-500`}
           ></span>
           {menu.map((item) => (
-            <li
+            <a
+              href={`#${item.id}`}
               key={item.id}
               className={`grid place-items-center w-20 h-8 font-bold rounded-full\ 
               hover:text-black dark:text-white transition-all duration-500 cursor-pointer gap-4 `}
               onClick={(e) => topicHandler(e)}
             >
               {item.name}
-            </li>
+            </a>
           ))}
         </ul>
         <div className={`flex w-max h-full`}>

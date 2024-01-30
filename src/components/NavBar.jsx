@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeTheme } from "../features/theme/themeSlice.js";
 import { ThemeButton } from "./ThemeButton.jsx";
 import { BarsIcon } from "../assets/icons/BarsIcon.jsx";
-import { CrossIcon } from "../assets/icons/CrossIcon.jsx";
 
 export const NavBar = () => {
   const [topic, setTopic] = useState("");
@@ -76,9 +75,9 @@ export const NavBar = () => {
            duration-500`}
         >
           {theme === "light" ? (
-            <img src={logo} alt="logo" className={`w-full h-full`} />
+            <img src={`${logo}`} alt="logo" className={`w-full h-full`} />
           ) : (
-            <img src={logoDark} alt="logo" className={`w-full h-full`} />
+            <img src={`${logoDark}`} alt="logo" className={`w-full h-full`} />
           )}
         </Link>
         <ul

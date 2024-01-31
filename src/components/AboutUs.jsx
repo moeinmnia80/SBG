@@ -18,7 +18,7 @@ export const AboutUs = () => {
         <div className={`flex flex-col text-center`}>
           <div>
             <div
-              className={`not-show flex flex-col items-center justify-center px-8 sm:p-0`}
+              className={`not-show flex flex-col items-center justify-center`}
             >
               <img
                 src={img1}

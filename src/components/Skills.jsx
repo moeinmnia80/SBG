@@ -35,7 +35,7 @@ export const Skills = () => {
         />
       </div>
       <div
-        className={`flex flex-wrap items-center justify-center gap-6 w-full px-7 mt-12 mb-8 not-show`}
+        className={`flex flex-wrap items-center justify-center gap-6 w-full mt-12 mb-8 not-show`}
       >
         <IoLogoHtml5
           className={`w-8 h-max transition-all duration-300 hover:text-orange-500 \
@@ -56,6 +56,10 @@ export const Skills = () => {
         <FaGithub
           className={`w-8 h-max transition-all duration-300 hover:text-purple-500 \
            dark:text-[#eee] dark:hover:text-purple-500`}
+        />
+        <FaGitlab
+          className={`w-8 h-max transition-all duration-300 hover:text-orange-600 \
+           dark:text-[#eee] dark:hover:text-orange-600`}
         />
         <TbBrandNpm
           className={`w-8 h-max transition-all duration-300 hover:text-red-500 \
@@ -104,10 +108,6 @@ export const Skills = () => {
         />
         <PiFramerLogoFill className={`w-8 h-max dark:text-[#eee]`} />
         <SiThreedotjs className={`w-8 h-max dark:text-[#eee]`} />
-        <FaGitlab
-          className={`w-8 h-max transition-all duration-300 hover:text-orange-600 \
-           dark:text-[#eee] dark:hover:text-orange-600`}
-        />
       </div>
     </>
   );

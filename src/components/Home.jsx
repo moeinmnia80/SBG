@@ -11,7 +11,7 @@ export const Home = () => {
       >
         <NavBar />
         <div
-          className={`flex items-center justify-between w-full h-full animate-fadeUp select-none p-2 sm:p-0`}
+          className={`flex items-center justify-between w-full h-full animate-fadeUp select-none px-4`}
         >
           <Description />
         </div>

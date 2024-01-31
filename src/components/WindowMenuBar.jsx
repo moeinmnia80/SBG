@@ -22,7 +22,7 @@ export const WindowMenuBar = () => {
           S
         </div>
         <div
-          className={`flex items-center gap-4 w-[calc(100%-6rem)] h-8 text-sm pl-4 overflow-x-scroll `}
+          className={`flex items-center gap-4 w-[calc(100%-6rem)] h-8 text-sm mx-3 sm:m-0 sm:pl-4 overflow-x-scroll `}
         >
           {portfolioItems.map((item) => (
             <PortfolioItem key={item.id} item={item} />

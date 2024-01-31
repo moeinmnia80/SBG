@@ -8,6 +8,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeTheme } from "../features/theme/themeSlice.js";
 import { ThemeButton } from "./ThemeButton.jsx";
 import { BarsIcon } from "../assets/icons/BarsIcon.jsx";
+import styled from "styled-components";
+import { CrossIcon } from "../assets/icons/CrossIcon.jsx";
+import { Menu } from "./Menu.jsx";
 
 export const NavBar = () => {
   const [topic, setTopic] = useState("");
@@ -67,7 +70,7 @@ export const NavBar = () => {
       ref={nav}
     >
       <div
-        className={`container flex justify-between items-center dark:text-white`}
+        className={`container flex justify-between items-center dark:text-white pr-4`}
       >
         <Link
           to={`/`}
@@ -108,8 +111,14 @@ export const NavBar = () => {
             className={`relative w-6 h-6 sm:hidden`}
             onClick={() => setIsOpen((isOpen) => !isOpen)}
           >
-            <BarsIcon style={`w-6 h-6 text-black`} />
+            <BarsIcon style={`w-6 h-6 text-black dark:text-white`} />
           </button>
+          <Menu
+            topic={topic}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            topicHandler={topicHandler}
+          />
           <ThemeButton
             isDark={isDark}
             themeSwitchHandler={themeSwitchHandler}

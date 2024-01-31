@@ -2,11 +2,12 @@ export const ArticleAboutUs = () => {
   return (
     <>
       <section
-        className={` grid place-items-center grid-cols-1 \ 
+        className={` grid place-items-center grid-cols-1 mt-8 w-full h-max gap-4 \ 
         grid-rows-[minmax(15rem,_1fr)_minmax(15rem,_1fr)_minmax(15rem,_1fr)] \
         sm:grid-rows-2 sm:grid-cols-2 \
-         px-8 sm:p-0 lg:grid-cols-3 lg:grid-rows-1 mt-8 w-full h-max gap-8 \
-         2xl:grid-cols-5`}
+        md:grid-rows-2 md:grid-cols-2
+        lg:grid-cols-3 lg:grid-rows-1 \
+        2xl:grid-cols-5`}
       >
         <article
           className={`not-show w-full h-full border-[1px] border-black rounded-md \

@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import ribbonImg from "./src/assets/images/ribbon.png";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -7,11 +6,11 @@ export default {
   theme: {
     container: {
       screens: {
-        sm: "450px",
-        md: "650px",
-        lg: "900px",
-        xl: "1100px",
-        "2xl": "1300px",
+        sm: "400px",
+        md: "600px",
+        lg: "800px",
+        xl: "1000px",
+        "2xl": "1200px",
       },
       center: true,
     },

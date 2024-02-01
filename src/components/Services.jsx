@@ -30,9 +30,7 @@ export const Services = () => {
         xl:top-1/2 xl:-translate-y-[calc(50%+5rem)] xl:left-48 xl:w-96 xl:h-96 \
         rounded-full blur-xl bg-yellow-300 dark:bg-[#C62128] dark:opacity-80`}
       />
-      <Container
-        className={`group/services container h-full overflow-y-scroll p-8`}
-      >
+      <Container className={`group/services container h-full  p-8`}>
         <div className={`w-full h-full grid place-items-center z-20`}>
           <img
             src={`${serviceImg}`}

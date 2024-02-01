@@ -1,11 +1,8 @@
+import { RightArrow } from "../assets/icons/RightArrow.jsx";
+
 export const ServiceCard = ({ service }) => {
   return (
-    <div
-      className={`group/cart relative w-full h-full before:hidden \
-       sm:before:inline-block before:content-["\\2192"] before:absolute \
-       before:w-max before:h-max before:text-xl \
-       before:top-1/2 before:-translate-y-1/2 before:-left-8 dark:before:text-white `}
-    >
+    <div className={`group/cart relative w-full h-full z-20`}>
       <span
         className={`absolute grid place-items-center w-24 h-8 \
          -top-6 left-1/2 -translate-x-1/2 border-[1px] border-black \
@@ -14,6 +11,9 @@ export const ServiceCard = ({ service }) => {
         {service.id < 10 && 0}
         {service.id}
       </span>
+      <RightArrow
+        style={`hidden sm:inline-block absolute -left-9 top-1/2 -translate-y-1/2 w-6 h-6`}
+      />
       <div
         className={`absolute w-full h-full top-2 -left-2 border-[1px] border-black rounded-md bg-[#eee]`}
       ></div>

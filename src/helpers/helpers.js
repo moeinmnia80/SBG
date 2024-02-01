@@ -48,6 +48,7 @@ const scrollHandler = (setTopic) => {
   const home = document.getElementById("home").offsetTop;
   const aboutUs = document.getElementById("aboutus").offsetTop;
   const portfolio = document.getElementById("portfolio").offsetTop;
+  const services = document.getElementById("services").offsetTop;
   const offset = 400; //px
   if (y > home - offset && y < aboutUs) {
     setTopic("home");
@@ -55,8 +56,11 @@ const scrollHandler = (setTopic) => {
   if (y > aboutUs - offset && y < portfolio) {
     setTopic("about us");
   }
-  if (y > portfolio - offset) {
+  if (y > portfolio - offset && y < services) {
     setTopic("portfolio");
+  }
+  if (y > services - offset) {
+    setTopic("services");
   }
 };
 

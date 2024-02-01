@@ -5,6 +5,7 @@ import { Ribbon } from "../components/Ribbon.jsx";
 import { useSelector } from "react-redux";
 import { Home } from "../components/Home.jsx";
 import { Portfolio } from "../components/Portfolio.jsx";
+import { Services } from "../components/Services.jsx";
 export const WelcomePage = () => {
   const theme = useSelector((store) => store.theme.theme);
   useEffect(() => {
@@ -16,6 +17,7 @@ export const WelcomePage = () => {
       <Ribbon />
       <AboutUs />
       <Portfolio />
+      <Services />
     </section>
   );
 };

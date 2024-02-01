@@ -2,14 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import menu from "../constants/menuItems.js";
 import logo from "../assets/images/logo.png";
 import logoDark from "../assets/images/logodark.png";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { scrollHandler, tabHandler } from "../helpers/helpers.js";
 import { useDispatch, useSelector } from "react-redux";
 import { changeTheme } from "../features/theme/themeSlice.js";
 import { ThemeButton } from "./ThemeButton.jsx";
 import { BarsIcon } from "../assets/icons/BarsIcon.jsx";
-import styled from "styled-components";
-import { CrossIcon } from "../assets/icons/CrossIcon.jsx";
 import { Menu } from "./Menu.jsx";
 
 export const NavBar = () => {
@@ -25,6 +23,14 @@ export const NavBar = () => {
     setIsShow(true);
     setTopic("home");
   }, []);
+
+  // scrolling when menubar is show, disabled
+  useEffect(() => {
+    isOpen && document.body.classList.add(`menu-bar`);
+    return () => {
+      isOpen && document.body.classList.remove(`menu-bar`);
+    };
+  }, [isOpen]);
 
   useEffect(() => {
     theme === "dark" ? setIsDark(true) : setIsDark(false);
@@ -74,7 +80,7 @@ export const NavBar = () => {
       >
         <Link
           to={`/`}
-          className={`w-16 h-16 object-cover hover:scale-110 hover:rotate-180 transition-all \
+          className={`w-16 h-16 object-cover sm:hover:scale-110 sm:hover:rotate-180 transition-all \
            duration-500`}
         >
           {theme === "light" ? (
@@ -95,29 +101,33 @@ export const NavBar = () => {
              rounded-full transition-all duration-500`}
           ></span>
           {menu.map((item) => (
-            <a
-              href={`#${item.id}`}
+            <Link
+              to={`${item.id}`}
+              smooth={true}
+              duration={1000}
               key={item.id}
               className={`grid place-items-center w-20 h-8 font-bold rounded-full\ 
               hover:text-black dark:text-white transition-all duration-500 cursor-pointer gap-4 `}
               onClick={(e) => topicHandler(e)}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </ul>
         <div className={`flex w-max h-full`}>
           <button
             className={`relative w-6 h-6 sm:hidden`}
-            onClick={() => setIsOpen((isOpen) => !isOpen)}
+            onClick={() => setIsOpen(true)}
           >
             <BarsIcon style={`w-6 h-6 text-black dark:text-white`} />
           </button>
           <Menu
             topic={topic}
             isOpen={isOpen}
+            isDark={isDark}
             setIsOpen={setIsOpen}
             topicHandler={topicHandler}
+            themeSwitchHandler={themeSwitchHandler}
           />
           <ThemeButton
             isDark={isDark}

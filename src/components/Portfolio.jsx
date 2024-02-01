@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { WindowMenuBar } from "./WindowMenuBar.jsx";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
+import { Element } from "react-scroll";
 export const Portfolio = () => {
   useEffect(() => {
     const hiddenElement = document.querySelectorAll(".portfolio");
@@ -18,8 +19,9 @@ export const Portfolio = () => {
 
   return (
     <>
-      <div
+      <Element
         className={`relative w-full h-screen flex items-center justify-center px-4`}
+        name={`portfolio`}
         id={`portfolio`}
       >
         <img
@@ -59,7 +61,7 @@ export const Portfolio = () => {
             </div>
           </WindowPortfolio>
         </div>
-      </div>
+      </Element>
     </>
   );
 };

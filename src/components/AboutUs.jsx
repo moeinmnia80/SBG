@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { observer } from "../helpers/helpers.js";
 import { ArticleAboutUs } from "./ArticleAboutUs.jsx";
 import { Skills } from "./Skills.jsx";
+import { Element } from "react-scroll";
 export const AboutUs = () => {
   useEffect(() => {
     const hiddenElement = document.querySelectorAll(".not-show");
@@ -11,8 +12,9 @@ export const AboutUs = () => {
 
   return (
     <>
-      <div
+      <Element
         className={`container full-screen-section min-h-screen lg:h-screen flex items-center justify-center px-4`}
+        name={`aboutus`}
         id={`aboutus`}
       >
         <div className={`flex flex-col text-center`}>
@@ -21,7 +23,7 @@ export const AboutUs = () => {
               className={`not-show flex flex-col items-center justify-center`}
             >
               <img
-                src={img1}
+                src={`${img1}`}
                 alt="sbg about us"
                 className={`w-full md:w-1/2`}
               />
@@ -39,7 +41,7 @@ export const AboutUs = () => {
           <Skills />
         </div>
         <div data-topic="#about-us"></div>
-      </div>
+      </Element>
     </>
   );
 };

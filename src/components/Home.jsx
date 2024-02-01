@@ -1,12 +1,14 @@
 import { NavBar } from "./NavBar.jsx";
 import { Description } from "./Description.jsx";
+import { Element } from "react-scroll";
 
 export const Home = () => {
   return (
     <>
-      <div
+      <Element
+        name={`home`}
         id={`home`}
-        className={`container h-screen overflow-hidden flex flex-col items-center \
+        className={`relative container h-screen overflow-hidden flex flex-col items-center \
         justify-center`}
       >
         <NavBar />
@@ -16,7 +18,7 @@ export const Home = () => {
           <Description />
         </div>
         <div data-topic="#home"></div>
-      </div>
+      </Element>
     </>
   );
 };

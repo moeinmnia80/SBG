@@ -4,6 +4,10 @@ import logoDark from "../assets/images/logodark.png";
 import menu from "../constants/menuItems.js";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
+import { Link } from "react-scroll";
+import { ThemeButton } from "./ThemeButton.jsx";
+import { MoonIcon } from "../assets/icons/MoonIcon.jsx";
+import { SunIcon } from "../assets/icons/SunIcon.jsx";
 
 const MenuBar = styled.div`
   position: fixed;
@@ -16,9 +20,17 @@ const MenuBar = styled.div`
   height: 100%;
   background-color: white;
   transition: all 450ms ease-in-out;
+  z-index: 100;
 `;
 
-export const Menu = ({ topic, isOpen, setIsOpen, topicHandler }) => {
+export const Menu = ({
+  topic,
+  isOpen,
+  isDark,
+  setIsOpen,
+  topicHandler,
+  themeSwitchHandler,
+}) => {
   const theme = useSelector((store) => store.theme.theme);
 
   useEffect(() => {
@@ -31,6 +43,11 @@ export const Menu = ({ topic, isOpen, setIsOpen, topicHandler }) => {
     };
   }, []);
 
+  const menuTopicHandler = (e) => {
+    topicHandler(e);
+    setIsOpen(false);
+  };
+
   const escapeHandler = () => {
     setIsOpen(false);
   };
@@ -41,7 +58,10 @@ export const Menu = ({ topic, isOpen, setIsOpen, topicHandler }) => {
         dark:bg-[#1a1a1d]    `}
       >
         <div className={`flex flex-col w-full`}>
-          <div className={`flex items-center justify-between`}>
+          <div
+            className={`flex items-center justify-between border-b-[1px] border-[#ccc] \
+            dark:border-[#C62128]`}
+          >
             {theme === "light" ? (
               <img src={`${logo}`} alt="logo" className={`w-16 h-16`} />
             ) : (
@@ -52,15 +72,20 @@ export const Menu = ({ topic, isOpen, setIsOpen, topicHandler }) => {
             >
               ScorpionBitesGroup
             </h1>
-            <div className={`font-bold mr-4`} onClick={() => escapeHandler()}>
+            <div
+              className={`font-bold mr-4 hover:text-[#1EEB31] dark:text-[#C62128] duration-500`}
+              onClick={() => escapeHandler()}
+            >
               esc
             </div>
           </div>
           {menu.map((menuItem) => (
-            <a
-              href={`#${menuItem.id}`}
+            <Link
+              to={`${menuItem.id}`}
+              smooth={true}
+              duration={1000}
               key={menuItem.id}
-              className={`w-full p-4 border-b-[1px] border-[#eee] dark:border-[#C62128] \
+              className={`w-full p-4 border-b-[1px] border-[#ccc] dark:border-[#C62128] \
                      ${
                        topic === menuItem.name.toLowerCase()
                          ? `bg-gradient-to-r from-[#1EEB31] to-[#AEFF02] \ 
@@ -68,13 +93,32 @@ export const Menu = ({ topic, isOpen, setIsOpen, topicHandler }) => {
                          : ``
                      } \
                      `}
-              onClick={(e) => topicHandler(e)}
+              onClick={(e) => menuTopicHandler(e)}
             >
               {menuItem.name}
-            </a>
+            </Link>
           ))}
         </div>
-        <div></div>
+        <div className={`flex justify-between items-center w-full p-4`}>
+          <p className={``}>Dark Mode</p>
+          <div
+            className={`relative w-14 h-7 bg-[#eee] dark:bg-[#C62128] rounded-full cursor-pointer`}
+            onClick={(e) => themeSwitchHandler(e)}
+          >
+            <div
+              className={`absolute top-1 ${
+                isDark ? `left-8` : `left-1`
+              } flex items-center justify-center w-5 h-5 shadow-xl \
+                 bg-white dark:bg-[#1a1a1d] rounded-full transition-all duration-500`}
+            >
+              {isDark ? (
+                <MoonIcon style={`w-3 h-3 text-gray-400`} />
+              ) : (
+                <SunIcon style={`w-4 h-4 text-gray-400`} />
+              )}
+            </div>
+          </div>
+        </div>
       </MenuBar>
     </>
   );

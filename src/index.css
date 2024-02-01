@@ -68,6 +68,9 @@
     animation: fadeUp 1100ms linear ;
     opacity: 1;
 }
+.menu-bar{
+    overflow: hidden;
+}
 /* animates */
 @keyframes toUp {
     0%{

@@ -1,8 +1,8 @@
 export const ServiceCard = ({ service }) => {
   return (
     <div
-      className={`group/cart relative w-full h-full before:hidden\
-       sm:before:inline-block before:content-['\\2192'] before:absolute \
+      className={`group/cart relative w-full h-full before:hidden \
+       sm:before:inline-block before:content-["\\2192"] before:absolute \
        before:w-max before:h-max before:text-xl \
        before:top-1/2 before:-translate-y-1/2 before:-left-8 dark:before:text-white `}
     >

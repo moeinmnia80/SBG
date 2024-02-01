@@ -6,8 +6,7 @@ import { ServiceCard } from "./ServiceCard.jsx";
 const Service = styled.div`
   position: relative;
   display: grid;
-  //width: 100%;
-  min-height: 100svh;
+  width: 100%;
   place-items: center;
   padding: 0 1rem;
   overflow: hidden;
@@ -23,10 +22,11 @@ const Container = styled.section`
 `;
 export const Services = () => {
   return (
-    <Service id={`services`}>
+    <Service id={`services`} className={`min-h-svh md:mt-20`}>
       <span
-        className={`absolute top-40 left-4 w-52 h-52 \
-        sm:w-64 sm:h-64 sm:top-52 sm:left-6
+        className={`absolute top-10 left-1/2 -translate-x-1/2 w-96 h-96 \
+        sm:w-80 sm:h-80 sm:top-8 sm:left-12 sm:translate-x-0 \
+        lg:top-14 lg:left-0 \
         xl:top-1/2 xl:-translate-y-[calc(50%+5rem)] xl:left-48 xl:w-96 xl:h-96 \
         rounded-full blur-xl bg-yellow-300 dark:bg-[#C62128] dark:opacity-80`}
       />

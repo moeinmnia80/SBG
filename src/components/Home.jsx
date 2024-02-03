@@ -9,12 +9,11 @@ export const Home = () => {
         name={`home`}
         id={`home`}
         className={`relative container h-screen overflow-hidden flex flex-col items-center \
-        justify-center`}
+        justify-center bg-white dark:bg-[#1a1a1d]`}
       >
         <NavBar />
         <div
-          className={`flex items-center justify-between w-full h-full animate-fadeUp select-none \
-           px-4 bg-white dark:bg-[#1a1a1d]`}
+          className={`flex items-center justify-between w-full h-full animate-fadeUp select-none px-4`}
         >
           <Description />
         </div>

@@ -55,10 +55,7 @@ export const Portfolio = () => {
               className={`relative window w-full h-full border-[1px] border-black rounded-md overflow-hidden`}
             >
               <WindowMenuBar />
-              <iframe
-                className={`w-full h-full bg-white`}
-                src={`${project.link}`}
-              >
+              <iframe className={`w-full h-full`} src={`${project.link}`}>
                 isOpen
               </iframe>
             </div>

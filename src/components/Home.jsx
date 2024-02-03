@@ -9,7 +9,7 @@ export const Home = () => {
         name={`home`}
         id={`home`}
         className={`relative container h-screen overflow-hidden flex flex-col items-center \
-        justify-center bg-white dark:bg-[#1a1a1d]`}
+        justify-center`}
       >
         <NavBar />
         <div

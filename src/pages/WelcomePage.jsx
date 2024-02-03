@@ -12,7 +12,7 @@ export const WelcomePage = () => {
     themeValidation();
   }, [theme]);
   return (
-    <section className={`dark:bg-[#1a1a1d]`}>
+    <section className={`bg-white dark:bg-[#1a1a1d]`}>
       <Home />
       <Ribbon />
       <AboutUs />

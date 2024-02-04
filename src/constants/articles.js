@@ -20,9 +20,10 @@ const articles = [
   {
     id: 2,
     img: `${jsArticleImage}`,
-    title: "data types",
-    summary: "There are different types of data in programming languages ...",
-    text: "There are many types of data in programming languages, including strings, numbers, booleans, arrays, objects, null, and undefined.",
+    title: "let, const VS var",
+    summary:
+      "Variables are used to store data, which can be defined in JavaScript from ...",
+    text: "Variables are used to store data, and var, let, const are used to define them in JavaScript.",
     dataSet: "js",
   },
 ];

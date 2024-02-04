@@ -47,9 +47,6 @@
 .showed{
     left: 0;
 }
-.active{
-    background-color: orange;
-}
 .portfolio{
     transform: translateY(50px);
     opacity: 0;

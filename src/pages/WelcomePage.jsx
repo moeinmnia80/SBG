@@ -8,10 +8,6 @@ import { Portfolio } from "../components/Portfolio.jsx";
 import { Services } from "../components/Services.jsx";
 import { Article } from "../components/Article.jsx";
 export const WelcomePage = () => {
-  const theme = useSelector((store) => store.theme.theme);
-  useEffect(() => {
-    themeValidation();
-  }, [theme]);
   return (
     <section className={`bg-white dark:bg-[#1a1a1d]`}>
       <Home />

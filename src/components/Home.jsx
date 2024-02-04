@@ -11,7 +11,6 @@ export const Home = () => {
         className={`relative container h-screen overflow-hidden flex flex-col items-center \
         justify-center`}
       >
-        <NavBar />
         <div
           className={`flex items-center justify-between w-full h-full animate-fadeUp select-none px-4`}
         >

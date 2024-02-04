@@ -11,8 +11,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 100svh;
-  padding: 0 7.5rem;
+  min-height: 100svh;
 `;
 const Articles = styled.div`
   display: grid;
@@ -28,7 +27,7 @@ export const Article = () => {
   return (
     <>
       <Element name={`articles`} id={`articles`}>
-        <Container className={`container`}>
+        <Container className={`container p-4 xl:p-32`}>
           <div className={`flex items-center justify-between w-full h-12 mb-4`}>
             <img
               src={`${articleImg}`}
@@ -37,7 +36,10 @@ export const Article = () => {
             />
             <Link
               to={`articles`}
-              className={`bg-black text-white px-8 py-1 rounded-md`}
+              className={`px-8 py-1 border-[1px] border-black border-dashed rounded-md \ 
+              hover:bg-black hover:text-white \
+              dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-[#1a1a1d] \
+              duration-300`}
             >
               All
             </Link>
@@ -47,28 +49,25 @@ export const Article = () => {
               <div
                 key={article.id}
                 className={`flex flex-col justify-between w-full h-full bg-white border-[1px] border-[#eee] \
-                 shadow-lg duration-500 p-2 rounded-2xl`}
+                 shadow-lg duration-500 p-2 rounded-2xl text-center \
+                  dark:bg-[#eee]`}
               >
                 <img
                   src={`${article.img}`}
                   alt="article"
                   className={`w-full h-1/2 object-cover rounded-2xl shadow-inner`}
                 />
-                <h2
-                  className={`w-full h-max text-sm text-center uppercase font-bold`}
-                >
-                  <span className={`text-left text-sm font-normal`}>
-                    topic:
-                  </span>{" "}
+                <h2 className={`w-full h-max text-sm uppercase font-bold`}>
                   {article.title}
                 </h2>
-                <p className={`px-2 text-sm text-gray-400`}>
+                <p className={`px-2 text-sm text-gray-400 dark:text-black`}>
                   {article.summary}
                 </p>
                 <Link
                   to={`/articles/${routeHandler(article.title)}`}
                   className={`bg-black hover:bg-white text-center border-2 border-black \
-                  hover:text-black duration-300 p-2 rounded-xl text-white`}
+                  hover:text-black duration-300 p-2 rounded-xl text-white \ 
+                  dark:bg-[#1a1a1d] dark:text-[#eee] dark:hover:bg-[#eee] dark:hover:text-black`}
                 >
                   Read more
                 </Link>

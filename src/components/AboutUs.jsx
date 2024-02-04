@@ -13,7 +13,7 @@ export const AboutUs = () => {
   return (
     <>
       <Element
-        className={`container full-screen-section min-h-screen lg:h-screen flex items-center justify-center px-4`}
+        className={`container min-h-svh flex items-center justify-center px-4`}
         name={`aboutus`}
         id={`aboutus`}
       >

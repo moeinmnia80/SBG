@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { Home } from "../components/Home.jsx";
 import { Portfolio } from "../components/Portfolio.jsx";
 import { Services } from "../components/Services.jsx";
+import { Article } from "../components/Article.jsx";
 export const WelcomePage = () => {
   const theme = useSelector((store) => store.theme.theme);
   useEffect(() => {
@@ -18,6 +19,7 @@ export const WelcomePage = () => {
       <AboutUs />
       <Portfolio />
       <Services />
+      <Article />
     </section>
   );
 };

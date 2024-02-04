@@ -43,12 +43,23 @@ const observerWin = new IntersectionObserver((entries) => {
   });
 });
 
+const observerServices = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("services-show");
+    } else {
+      entry.target.classList.remove("services-show");
+    }
+  });
+});
+
 const scrollHandler = (setTopic) => {
   let y = window.scrollY;
   const home = document.getElementById("home").offsetTop;
   const aboutUs = document.getElementById("aboutus").offsetTop;
   const portfolio = document.getElementById("portfolio").offsetTop;
   const services = document.getElementById("services").offsetTop;
+  const articles = document.getElementById("articles").offsetTop;
   const offset = 400; //px
   if (y > home - offset && y < aboutUs) {
     setTopic("home");
@@ -59,19 +70,21 @@ const scrollHandler = (setTopic) => {
   if (y > portfolio - offset && y < services) {
     setTopic("portfolio");
   }
-  if (y > services - offset) {
+  if (y > services - offset && y < articles) {
     setTopic("services");
+  }
+  if (y > articles - offset) {
+    setTopic("articles");
   }
 };
 
-const scrollVar = () => {
-  const htmlElement = document.documentElement;
-  const percentOfScreenHeightScrolled =
-    htmlElement.scrollTop / htmlElement.clientHeight;
-  htmlElement.style.setProperty(
-    "--scroll",
-    Math.min(percentOfScreenHeightScrolled * 100, 100),
-  );
+const routeHandler = (string) => {
+  const data = string.split(" ");
+  let res = "";
+  data.forEach((item) => {
+    res ? (res = res + "-" + item) : (res += item);
+  });
+  return res;
 };
 
 export {
@@ -79,6 +92,7 @@ export {
   observer,
   scrollHandler,
   observerFadeUp,
-  scrollVar,
   observerWin,
+  observerServices,
+  routeHandler,
 };

@@ -1,7 +1,7 @@
 import img from "../assets/images/sbg.png";
 import { BlueBlobIcon } from "../assets/icons/BlueBlobIcon.jsx";
 import { Link } from "react-router-dom";
-import { FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 
 export const Description = () => {
   return (
@@ -28,7 +28,7 @@ export const Description = () => {
           <FaInstagram />
         </Link>
         <Link
-          to={`/`}
+          to={`https://www.linkedin.com/in/moeinmnia/`}
           className={`text-black hover:text-[#1EEB31] dark:text-[#eee] dark:hover:text-[#C62128] transition-all duration-500`}
         >
           <FaLinkedinIn />
@@ -38,6 +38,12 @@ export const Description = () => {
           className={`text-black hover:text-[#1EEB31] dark:text-[#eee] dark:hover:text-[#C62128] transition-all duration-500`}
         >
           <FaYoutube />
+        </Link>
+        <Link
+          to={`https://github.com/moeinmnia80`}
+          className={`text-black hover:text-[#1EEB31] dark:text-[#eee] dark:hover:text-[#C62128] transition-all duration-500`}
+        >
+          <FaGithub />
         </Link>
       </div>
     </>

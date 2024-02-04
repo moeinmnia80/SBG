@@ -38,7 +38,7 @@ export const Portfolio = () => {
             lg:-top-10 lg:hover:-top-16
             xl:w-1/5 xl:-top-10 xl:hover:-top-16 \
             2xl:-top-8 2xl:hover:-top-16 \ 
-            duration-500 `}
+            duration-500`}
           >
             <img
               src={`${portfolioImg}`}
@@ -50,7 +50,7 @@ export const Portfolio = () => {
             <div
               className={`hidden md:flex window absolute top-4 -left-4 \
               w-full h-full bg-[#eee] border-[1px] border-black rounded-md`}
-            ></div>
+            />
             <div
               className={`relative window w-full h-full border-[1px] border-black rounded-md overflow-hidden`}
             >

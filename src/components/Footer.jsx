@@ -26,9 +26,7 @@ export const Footer = () => {
   };
   return (
     <>
-      <section
-        className={`relative w-full h-64 sm:h-36 bg-[#eee] px-4 mt-36 lg:mt-0`}
-      >
+      <section className={`relative w-full h-64 sm:h-36 bg-[#eee] px-4`}>
         <Container className={`container relative h-full`}>
           <Contact
             className={`flex flex-col md:flex-row items-center justify-between \

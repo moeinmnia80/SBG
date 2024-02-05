@@ -11,7 +11,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  min-height: 100svh;
+  height: 100%;
 `;
 const Articles = styled.div`
   display: grid;
@@ -27,7 +27,7 @@ export const Article = () => {
   return (
     <>
       <Element name={`articles`} id={`articles`}>
-        <section className={`w-full h-full px-4`}>
+        <section className={`w-full min-h-svh px-4 pb-36 lg:pb-0`}>
           <Container className={`container`}>
             <div
               className={`to-up flex items-center justify-between w-full h-12 mb-4`}

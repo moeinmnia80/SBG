@@ -1,20 +1,17 @@
 import portfolioImg from "../assets/images/portfolio.png";
 import back from "../assets/images/back.jpg";
-import { observerFadeUp, observerWin } from "../helpers/helpers.js";
-import { useEffect } from "react";
 import { WindowMenuBar } from "./WindowMenuBar.jsx";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import { Element } from "react-scroll";
-export const Portfolio = () => {
-  useEffect(() => {
-    const hiddenElement = document.querySelectorAll(".portfolio");
-    hiddenElement.forEach((el) => observerFadeUp.observe(el));
-    document
-      .querySelectorAll(".window")
-      .forEach((section) => observerWin.observe(section));
-  }, [window.scrollY]);
 
+const WindowPortfolio = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+`;
+
+export const Portfolio = () => {
   const project = useSelector((state) => state.project.project);
 
   return (
@@ -26,7 +23,7 @@ export const Portfolio = () => {
       >
         <img
           src={`${back}`}
-          alt=""
+          alt="background"
           className={`absolute top-0 left-0 w-full h-full object-cover`}
         />
         <div className={`container relative flex items-center h-3/4`}>
@@ -43,16 +40,16 @@ export const Portfolio = () => {
             <img
               src={`${portfolioImg}`}
               alt="portfolio"
-              className={`w-full h-full object-cover`}
+              className={`to-up w-full h-full object-cover`}
             />
           </div>
           <WindowPortfolio className={`absolute w-full h-full`}>
             <div
-              className={`hidden md:flex window absolute top-4 -left-4 \
+              className={`to-up hidden md:flex absolute top-4 -left-4 \
               w-full h-full bg-[#eee] border-[1px] border-black rounded-md`}
             />
             <div
-              className={`relative window w-full h-full border-[1px] border-black rounded-md overflow-hidden`}
+              className={`to-up relative w-full h-full border-[1px] border-black rounded-md overflow-hidden`}
             >
               <WindowMenuBar />
               <iframe className={`w-full h-full`} src={`${project.link}`}>
@@ -65,9 +62,3 @@ export const Portfolio = () => {
     </>
   );
 };
-
-const WindowPortfolio = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-`;

@@ -72,7 +72,8 @@ export const NavBar = () => {
     <nav
       className={`fixed top-0 w-full h-max bg-white ${
         isShow ? `` : `-translate-y-full`
-      } transition-all duration-1000 z-50 dark:bg-[#1a1a1d]`}
+      } transition-all duration-1000 z-50 dark:bg-[#1a1a1d] \ 
+      border-b-[1px] border-[#eee] dark:border-[#ffffff22]`}
       ref={nav}
     >
       <div

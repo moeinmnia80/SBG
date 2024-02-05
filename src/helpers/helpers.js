@@ -22,33 +22,12 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 });
-
-const observerFadeUp = new IntersectionObserver((entries) => {
+const observerToUp = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("portfolio-show");
+      entry.target.classList.add("to-up-show");
     } else {
-      entry.target.classList.remove("portfolio-show");
-    }
-  });
-});
-
-const observerWin = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("window-show");
-    } else {
-      entry.target.classList.remove("window-show");
-    }
-  });
-});
-
-const observerServices = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("services-show");
-    } else {
-      entry.target.classList.remove("services-show");
+      entry.target.classList.remove("to-up-show");
     }
   });
 });
@@ -87,12 +66,4 @@ const routeHandler = (string) => {
   return res;
 };
 
-export {
-  tabHandler,
-  observer,
-  scrollHandler,
-  observerFadeUp,
-  observerWin,
-  observerServices,
-  routeHandler,
-};
+export { tabHandler, observer, scrollHandler, observerToUp, routeHandler };

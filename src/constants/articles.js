@@ -26,6 +26,15 @@ const articles = [
     text: "Variables are used to store data, and var, let, const are used to define them in JavaScript.",
     dataSet: "js",
   },
+  {
+    id: 3,
+    img: `${jsArticleImage}`,
+    title: "let, const VS var",
+    summary:
+      "Variables are used to store data, which can be defined in JavaScript from ...",
+    text: "Variables are used to store data, and var, let, const are used to define them in JavaScript.",
+    dataSet: "js",
+  },
 ];
 
 export default articles;

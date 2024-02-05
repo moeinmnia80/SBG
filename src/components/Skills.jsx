@@ -11,12 +11,8 @@ import {
   SiApollographql,
   SiJavascript,
   SiMui,
-  SiNextdotjs,
-  SiPwa,
   SiRedux,
   SiTailwindcss,
-  SiThreedotjs,
-  SiTypescript,
   SiVite,
 } from "react-icons/si";
 import { TbBrandNpm } from "react-icons/tb";
@@ -90,24 +86,24 @@ export const Skills = () => {
            dark:text-[#eee] dark:hover:text-purple-700`}
         />
         <SiTailwindcss
-          className={`w-8 h-max transition-all duration-300 hover:text-blue-500 \
-           dark:text-[#eee] dark:hover:text-blue-500`}
+          className={`w-8 h-max transition-all duration-300 hover:text-blue-400 \
+           dark:text-[#eee] dark:hover:text-blue-400`}
         />
-        <SiPwa
-          className={`w-8 h-max transition-all duration-300 hover:text-purple-900 \
-           dark:text-[#eee] dark:hover:text-purple-900`}
-        />
-        <SiNextdotjs className={`w-8 h-max dark:text-[#eee]`} />
-        <SiTypescript
-          className={`w-8 h-max transition-all duration-300 hover:text-blue-600 \
-           dark:text-[#eee] dark:hover:text-blue-600`}
-        />
+        {/*<SiPwa*/}
+        {/*  className={`w-8 h-max transition-all duration-300 hover:text-purple-900 \*/}
+        {/*   dark:text-[#eee] dark:hover:text-purple-900`}*/}
+        {/*/>*/}
+        {/*<SiNextdotjs className={`w-8 h-max dark:text-[#eee]`} />*/}
+        {/*<SiTypescript*/}
+        {/*  className={`w-8 h-max transition-all duration-300 hover:text-blue-600 \*/}
+        {/*   dark:text-[#eee] dark:hover:text-blue-600`}*/}
+        {/*/>*/}
         <SiMui
           className={`w-8 h-max transition-all duration-300 hover:text-blue-600 \
            dark:text-[#eee] dark:hover:text-blue-600`}
         />
         <PiFramerLogoFill className={`w-8 h-max dark:text-[#eee]`} />
-        <SiThreedotjs className={`w-8 h-max dark:text-[#eee]`} />
+        {/*<SiThreedotjs className={`w-8 h-max dark:text-[#eee]`} />*/}
       </div>
     </>
   );

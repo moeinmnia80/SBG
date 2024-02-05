@@ -35,46 +35,25 @@
 }
 .not-show{
     opacity: 0;
-    transition: all 3s;
-    position: relative;
-    left: -100%;
 }
 .show{
-    animation: fadeUp 2s linear;
-    left: 0;
+    animation: fadeUp 3s linear;
     opacity: 1;
 }
 .showed{
     left: 0;
 }
-.portfolio{
+.to-up{
+    opacity: 0;
     transform: translateY(50px);
-    opacity: 0;
 }
-.portfolio-show{
-    opacity: 1;
-    animation: fadeUp 2s linear;
+.to-up-show{
+    animation: toUp 1000ms linear;
     transform: translateY(0);
-}
-.window{
-    opacity: 0;
-    transition: all 1100ms;
-}
-.window-show{
-    animation: toUp 1100ms linear ;
     opacity: 1;
 }
 .menu-bar{
     overflow: hidden;
-}
-.services{
-    opacity: 0;
-    transform: translateY(50px);
-}
-.services-show{
-    animation: toUp 1000ms linear;
-    transform: translateY(0);
-    opacity: 1;
 }
 /* animates */
 @keyframes toUp {

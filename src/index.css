@@ -22,7 +22,7 @@
 }
     /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #C62128;
+    background: #1a1a1d;
 }
 /***** finished scrollbar *****/
 

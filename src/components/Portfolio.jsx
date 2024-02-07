@@ -17,7 +17,7 @@ export const Portfolio = () => {
   return (
     <>
       <Element
-        className={`relative w-full h-screen flex items-center justify-center px-4`}
+        className={`relative w-full h-screen flex items-center justify-center px-8`}
         name={`portfolio`}
         id={`portfolio`}
       >

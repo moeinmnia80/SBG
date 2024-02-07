@@ -63,7 +63,7 @@ const routeHandler = (string) => {
   data.forEach((item) => {
     res ? (res = res + "-" + item) : (res += item);
   });
-  return res;
+  return res.toLowerCase().replace(",", "");
 };
 
 export { tabHandler, observer, scrollHandler, observerToUp, routeHandler };

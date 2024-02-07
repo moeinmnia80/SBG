@@ -4,6 +4,8 @@ import articles from "../constants/articles.js";
 import { Link } from "react-router-dom";
 import articleImg from "../assets/images/article.png";
 import { routeHandler } from "../helpers/helpers.js";
+import AuthorImg from "../assets/images/profileAuther.jpg";
+import { FeedbackArticle } from "./FeedbackArticle.jsx";
 
 const Container = styled.div`
   display: flex;
@@ -27,10 +29,12 @@ export const Article = () => {
   return (
     <>
       <Element name={`articles`} id={`articles`}>
-        <section className={`w-full min-h-svh px-4 pb-36 lg:pb-0`}>
+        <section
+          className={`grid place-items-center w-full min-h-svh py-12 px-8 pb-36 lg:pb-0`}
+        >
           <Container className={`container`}>
             <div
-              className={`to-up flex items-center justify-between w-full h-12 mb-4`}
+              className={`to-up flex items-center justify-between w-full h-12 mb-8`}
             >
               <img
                 src={`${articleImg}`}
@@ -49,22 +53,46 @@ export const Article = () => {
             </div>
             <Articles className={`to-up`}>
               {articles.map((article) => (
-                <div
+                <article
                   key={article.id}
                   className={`flex flex-col justify-between w-full h-full \ 
                   bg-white border-[1px] border-[#eee] \
                   shadow-lg duration-500 p-2 rounded-2xl text-center \
                   dark:bg-[#eee]`}
                 >
-                  <img
-                    src={`${article.img}`}
-                    alt="article"
-                    className={`w-full h-1/2 object-cover rounded-2xl shadow-inner`}
-                  />
-                  <h2 className={`w-full h-max text-sm uppercase font-bold`}>
+                  <div className={`w-full h-3/5`}>
+                    <img
+                      src={`${article.img}`}
+                      alt="article"
+                      className={`w-full h-4/5 object-cover rounded-t-2xl shadow-inner`}
+                    />
+                    <span
+                      className={`flex items-center justify-between w-full h-1/5 py-2 \
+                    border-b-[1px] border-[#eee] dark:border-[#00000022]`}
+                    >
+                      <div className={`flex items-center w-max h-full`}>
+                        <img
+                          src={`${AuthorImg}`}
+                          alt=""
+                          className={`w-6 h-6 object-cover rounded-full mr-2`}
+                        />
+                        <p
+                          className={`text-[10px] font-bold leading-none text-[#00000044]`}
+                        >
+                          Moein
+                        </p>
+                      </div>
+                      <FeedbackArticle article={article} />
+                    </span>
+                  </div>
+                  <h2
+                    className={`w-full h-max text-sm uppercase font-bold py-1`}
+                  >
                     {article.title}
                   </h2>
-                  <p className={`px-2 text-sm text-gray-400 dark:text-black`}>
+                  <p
+                    className={`h-max px-2 pb-1 text-sm text-gray-400 dark:text-black`}
+                  >
                     {article.summary}
                   </p>
                   <Link
@@ -75,7 +103,7 @@ export const Article = () => {
                   >
                     Read more
                   </Link>
-                </div>
+                </article>
               ))}
             </Articles>
           </Container>

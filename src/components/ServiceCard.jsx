@@ -16,7 +16,8 @@ export const ServiceCard = ({ service }) => {
         dark:text-white`}
       />
       <div
-        className={`absolute w-full h-full top-2 -left-2 border-[1px] border-[#1a1a1d] rounded-md bg-[#eee]`}
+        className={`absolute w-full h-full top-2 -left-2 \
+        border-[1px] border-[#1a1a1d] rounded-md bg-[#eee] duration-300`}
       />
       <div
         className={`relative w-full h-full border-[1px] border-[#1a1a1d] rounded-md bg-white overflow-hidden`}

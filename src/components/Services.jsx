@@ -8,8 +8,8 @@ const Service = styled.div`
   display: grid;
   width: 100%;
   place-items: center;
-  padding: 0 1rem;
   border-bottom: 1px solid #eee;
+  padding: 3rem 0;
   overflow: hidden;
 `;
 const Container = styled.section`
@@ -25,10 +25,10 @@ export const Services = () => {
   return (
     <Service
       id={`services`}
-      className={`min-h-svh xl:h-svh sm:place-content-center my-14 md:mt-20 xl:m-0 \
+      className={`min-h-svh xl:h-svh sm:place-content-center \
        dark:border-[#ffffff22]`}
     >
-      <Container className={`group/services relative container h-full  p-8`}>
+      <Container className={`group/services relative container h-full p-8`}>
         <div className={`to-up group relative w-full h-full`}>
           <div
             className={`absolute w-full h-full top-2 -left-2 border-[1px] border-[#1a1a1d] rounded-md \ 

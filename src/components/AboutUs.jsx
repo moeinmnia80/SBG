@@ -13,7 +13,7 @@ export const AboutUs = () => {
   return (
     <>
       <Element
-        className={`container min-h-svh flex items-center justify-center px-4`}
+        className={`container min-h-svh flex items-center justify-center px-8`}
         name={`aboutus`}
         id={`aboutus`}
       >
@@ -40,7 +40,6 @@ export const AboutUs = () => {
           <ArticleAboutUs />
           <Skills />
         </div>
-        <div data-topic="#about-us"></div>
       </Element>
     </>
   );

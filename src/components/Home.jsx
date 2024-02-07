@@ -12,11 +12,10 @@ export const Home = () => {
         justify-center`}
       >
         <div
-          className={`flex items-center justify-between w-full h-full animate-fadeUp select-none px-4`}
+          className={`flex items-center justify-between w-full h-full animate-fadeUp select-none px-8`}
         >
           <Description />
         </div>
-        <div data-topic="#home"></div>
       </Element>
     </>
   );

@@ -29,10 +29,10 @@ const articles = [
   {
     id: 3,
     img: `${jsArticleImage}`,
-    title: "let, const VS var",
+    title: "Truthy and Falsy",
     summary:
-      "Variables are used to store data, which can be defined in JavaScript from ...",
-    text: "Variables are used to store data, and var, let, const are used to define them in JavaScript.",
+      "We have a data type that is Boolean whose values are true or false...",
+    text: "We have a type of data that is Boolean, whose values are true or false. If we want to know the equivalent of other data types to Boolean, we enter the area of truthy and falsy.",
     dataSet: "js",
   },
 ];

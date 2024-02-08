@@ -86,19 +86,19 @@ export const Article = () => {
                     </span>
                   </div>
                   <h2
-                    className={`w-full h-max text-sm uppercase font-bold py-1`}
+                    className={`w-full h-max text-[13px] uppercase font-bold py-1`}
                   >
                     {article.title}
                   </h2>
                   <p
-                    className={`h-max px-2 pb-1 text-sm text-gray-400 dark:text-black`}
+                    className={`h-max px-2 pb-1 text-xs text-gray-400 dark:text-black`}
                   >
                     {article.summary}
                   </p>
                   <Link
                     to={`/articles/${routeHandler(article.title)}`}
                     className={`bg-[#1a1a1d] hover:bg-white text-center border-2 border-[#1a1a1d] \
-                    hover:text-[#1a1a1d] duration-300 p-2 rounded-xl text-white \ 
+                    hover:text-[#1a1a1d] duration-300 p-2 rounded-xl text-white text-xs \ 
                     dark:bg-[#1a1a1d] dark:text-[#eee] dark:hover:bg-[#eee] dark:hover:text-[#1a1a1d]`}
                   >
                     Read more

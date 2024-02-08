@@ -1,11 +1,8 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
 import { CrossIcon } from "../assets/icons/CrossIcon.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { changeTab } from "../features/project/projectSlice.js";
 
 export const PortfolioItem = ({ item }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const project = useSelector((state) => state.project.project);
   const dispatch = useDispatch();
   return (

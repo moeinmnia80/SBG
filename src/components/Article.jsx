@@ -6,6 +6,8 @@ import articleImg from "../assets/images/article.png";
 import { routeHandler } from "../helpers/helpers.js";
 import AuthorImg from "../assets/images/profileAuther.jpg";
 import { FeedbackArticle } from "./FeedbackArticle.jsx";
+import { useQuery } from "@apollo/client";
+import { GET_BLOGS } from "../graphql/queries.js";
 
 const Container = styled.div`
   display: flex;
@@ -26,6 +28,7 @@ const Articles = styled.div`
   height: max-content;
 `;
 export const Article = () => {
+  const { loading, data, error } = useQuery(GET_BLOGS);
   return (
     <>
       <Element name={`articles`} id={`articles`}>

@@ -47,7 +47,6 @@ export const NavBar = () => {
   };
   useEffect(() => {
     window.addEventListener("scroll", () => scrollHandler(setTopic));
-
     return () => {
       window.removeEventListener("scroll", () => scrollHandler(setTopic));
     };

@@ -5,7 +5,6 @@ import menu from "../constants/menuItems.js";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { Link } from "react-scroll";
-import { ThemeButton } from "./ThemeButton.jsx";
 import { MoonIcon } from "../assets/icons/MoonIcon.jsx";
 import { SunIcon } from "../assets/icons/SunIcon.jsx";
 
@@ -32,7 +31,6 @@ export const Menu = ({
   themeSwitchHandler,
 }) => {
   const theme = useSelector((store) => store.theme.theme);
-
   useEffect(() => {
     const exitHandler = (e) => {
       e.key === "Escape" && setIsOpen(false);

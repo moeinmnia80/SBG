@@ -1,9 +1,7 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_BLOG } from "../graphql/queries.js";
 import styled from "styled-components";
-import { LeftArrow } from "../assets/icons/LeftArrow.jsx";
-import { data } from "autoprefixer";
 import sanitizeHtml from "sanitize-html";
 
 const Container = styled.div`
@@ -31,7 +29,6 @@ const Main = styled.div`
 export const ArticleDetailPage = () => {
   const { slug } = useParams();
   const { loading, data, error } = useQuery(GET_BLOG, { variables: { slug } });
-  const navigate = useNavigate();
   if (loading) {
     return (
       <div className={`grid place-items-center w-full h-svh dark:bg-[#1a1a1d]`}>

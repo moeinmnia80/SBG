@@ -57,15 +57,6 @@ export const NavBar = () => {
     const value = e.target.innerText.toLowerCase();
     setTopic(value);
   };
-  // change theme
-  const themeSwitchHandler = () => {
-    setIsDark((isDark) => !isDark);
-    if (isDark) {
-      dispatch(changeTheme("light"));
-    } else {
-      dispatch(changeTheme("dark"));
-    }
-  };
 
   return (
     <nav
@@ -126,13 +117,10 @@ export const NavBar = () => {
             isOpen={isOpen}
             isDark={isDark}
             setIsOpen={setIsOpen}
+            setIsDark={setIsDark}
             topicHandler={topicHandler}
-            themeSwitchHandler={themeSwitchHandler}
           />
-          <ThemeButton
-            isDark={isDark}
-            themeSwitchHandler={themeSwitchHandler}
-          />
+          <ThemeButton isDark={isDark} setIsDark={setIsDark} />
         </div>
       </div>
     </nav>

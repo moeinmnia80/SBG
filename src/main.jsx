@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./app/store.js";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { NextUIProvider } from "@nextui-org/system";
 
 const client = new ApolloClient({
   uri: import.meta.env.VITE_GRAPHCMS_URI,
@@ -17,7 +18,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <ApolloProvider client={client}>
       <Provider store={store}>
-        <App />
+        <NextUIProvider>
+          <App />
+        </NextUIProvider>
       </Provider>
     </ApolloProvider>
   </BrowserRouter>,

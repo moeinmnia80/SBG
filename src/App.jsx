@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import { WelcomePage } from "./pages/WelcomePage.jsx";
 import { NotFoundPage } from "./pages/404.jsx";
-import { Articles } from "./components/Articles.jsx";
-import { ArticleDatail } from "./components/ArticleDatail.jsx";
+import { ArticlesPage } from "./pages/ArticlesPage.jsx";
+import { ArticleDetailPage } from "./pages/ArticleDetailPage.jsx";
 import { Layout } from "./layout/Layout.jsx";
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<WelcomePage />} />
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/articles/:id" element={<ArticleDatail />} />
+          <Route path="/articles" element={<ArticlesPage />} />
+          <Route path="/articles/:slug" element={<ArticleDetailPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Layout>

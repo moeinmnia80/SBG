@@ -23,4 +23,55 @@ const GET_BLOGS = gql`
     }
   }
 `;
-export { GET_BLOGS };
+// noinspection GraphQLUnresolvedReference
+const GET_ALL_BLOGS = gql`
+  query {
+    posts {
+      id
+      title
+      summary
+      slug
+      text {
+        text
+      }
+      author {
+        avatar {
+          url
+        }
+        name
+      }
+      img {
+        url
+      }
+    }
+  }
+`;
+// noinspection GraphQLUnresolvedReference
+const GET_BLOG = gql`
+  query getBlogInfo($slug: String!) {
+    post(where: { slug: $slug }) {
+      id
+      title
+      summary
+      slug
+      text {
+        html
+      }
+      author {
+        avatar {
+          url
+        }
+        name
+      }
+      img {
+        url
+      }
+      backgroundArticle {
+        url
+      }
+      datePublished
+    }
+  }
+`;
+
+export { GET_BLOGS, GET_ALL_BLOGS, GET_BLOG };

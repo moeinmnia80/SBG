@@ -11,4 +11,15 @@ const themeValidation = () => {
     localStorage.setItem("theme", "light");
   }
 };
+
+// change theme
+const themeSwitchHandler = (isDark, setIsDark, dispatch, changeTheme) => {
+  setIsDark((isDark) => !isDark);
+  if (isDark) {
+    dispatch(changeTheme("light"));
+  } else {
+    dispatch(changeTheme("dark"));
+  }
+};
 export default themeValidation;
+export { themeSwitchHandler };

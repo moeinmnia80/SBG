@@ -1,5 +1,5 @@
 import { FeedbackArticle } from "./FeedbackArticle.jsx";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 export const CardPost = ({ author, img, slug, summary, title }) => {
   return (
     <>
@@ -34,7 +34,9 @@ export const CardPost = ({ author, img, slug, summary, title }) => {
             <FeedbackArticle title={title} slug={slug} />
           </span>
         </div>
-        <h2 className={`w-full h-max text-[13px] uppercase font-bold py-1`}>
+        <h2
+          className={`w-full h-max text-[13px] uppercase font-bold py-1 dark:text-[#1a1a1d]`}
+        >
           {title}
         </h2>
         <p className={`h-max px-2 pb-1 text-xs text-gray-400 dark:text-black`}>

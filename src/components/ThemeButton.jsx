@@ -1,13 +1,23 @@
 import { MoonIcon } from "../assets/icons/MoonIcon.jsx";
 import { SunIcon } from "../assets/icons/SunIcon.jsx";
+import { useDispatch } from "react-redux";
+import { changeTheme } from "../features/theme/themeSlice.js";
+import { themeSwitchHandler } from "../helpers/theme.js";
 
-export const ThemeButton = ({ isDark, themeSwitchHandler }) => {
+export const ThemeButton = ({ isDark, setIsDark, style }) => {
+  const dispatch = useDispatch();
   return (
     <>
-      <div className={`hidden sm:flex justify-center items-center`}>
+      <div
+        className={`${
+          style ? `${style}` : `hidden`
+        } sm:flex justify-center items-center`}
+      >
         <div
           className={`relative w-14 h-7 bg-[#eee] dark:bg-[#C62128] rounded-full cursor-pointer`}
-          onClick={(e) => themeSwitchHandler(e)}
+          onClick={(e) =>
+            themeSwitchHandler(isDark, setIsDark, dispatch, changeTheme)
+          }
         >
           <div
             className={`absolute top-1 ${

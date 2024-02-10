@@ -44,17 +44,21 @@ export const Article = () => {
               <Link
                 to={`articles`}
                 className={`px-8 py-1 border-[1px] border-[#1a1a1d] rounded-md \ 
-              hover:bg-[#1a1a1d] hover:text-white \
-              dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-[#1a1a1d] \
-              duration-300`}
+                hover:bg-[#1a1a1d] hover:text-white \
+                dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-[#1a1a1d] \
+                duration-300`}
               >
                 All
               </Link>
             </div>
             <Articles className={`to-up`}>
-              {data?.posts.map((post) => (
-                <CardPost {...post} key={post.id} />
-              ))}
+              {loading ? (
+                <div className={`grid place-items-center`}>
+                  <span className="loader"></span>
+                </div>
+              ) : (
+                data?.posts.map((post) => <CardPost {...post} key={post.id} />)
+              )}
             </Articles>
           </Container>
         </section>

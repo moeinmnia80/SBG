@@ -34,11 +34,11 @@ const observerToUp = new IntersectionObserver((entries) => {
 
 const scrollHandler = (setTopic) => {
   let y = window.scrollY;
-  const home = document.getElementById("home").offsetTop;
-  const aboutUs = document.getElementById("aboutus").offsetTop;
-  const portfolio = document.getElementById("portfolio").offsetTop;
-  const services = document.getElementById("services").offsetTop;
-  const articles = document.getElementById("articles").offsetTop;
+  const home = document.getElementById("home")?.offsetTop;
+  const aboutUs = document.getElementById("aboutus")?.offsetTop;
+  const portfolio = document.getElementById("portfolio")?.offsetTop;
+  const services = document.getElementById("services")?.offsetTop;
+  const articles = document.getElementById("articles")?.offsetTop;
   const offset = 400; //px
   if (y > home - offset && y < aboutUs) {
     setTopic("home");

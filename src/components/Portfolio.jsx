@@ -61,7 +61,9 @@ export const Portfolio = () => {
                   className={`flex items-center justify-center w-full h-[calc(100%-3rem)] \
                   bg-white dark:bg-[#1a1a1d] dark:text-white`}
                 >
-                  <p className={`uppercase font-bold tracking-widest`}>
+                  <p
+                    className={`uppercase font-bold tracking-widest bg-[#eee]`}
+                  >
                     Select from the bar above to see my projects
                   </p>
                 </div>

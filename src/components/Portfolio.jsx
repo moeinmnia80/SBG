@@ -52,9 +52,20 @@ export const Portfolio = () => {
               className={`to-up relative w-full h-full border-[1px] border-black rounded-md overflow-hidden`}
             >
               <WindowMenuBar />
-              <iframe className={`w-full h-full`} src={`${project.link}`}>
-                isOpen
-              </iframe>
+              {!!project.id ? (
+                <iframe className={`w-full h-full`} src={`${project.link}`}>
+                  isOpen
+                </iframe>
+              ) : (
+                <div
+                  className={`flex items-center justify-center w-full h-[calc(100%-3rem)] \
+                  bg-white dark:bg-[#1a1a1d] dark:text-white`}
+                >
+                  <p className={`uppercase font-bold tracking-widest`}>
+                    Select from the bar above to see my projects
+                  </p>
+                </div>
+              )}
             </div>
           </WindowPortfolio>
         </div>

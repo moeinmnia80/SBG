@@ -57,13 +57,4 @@ const scrollHandler = (setTopic) => {
   }
 };
 
-const routeHandler = (string) => {
-  const data = string.split(" ");
-  let res = "";
-  data.forEach((item) => {
-    res ? (res = res + "-" + item) : (res += item);
-  });
-  return res.toLowerCase().replace(",", "");
-};
-
-export { tabHandler, observer, scrollHandler, observerToUp, routeHandler };
+export { tabHandler, observer, scrollHandler, observerToUp };

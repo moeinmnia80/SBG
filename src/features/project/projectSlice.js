@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   project: {
-    id: 1,
-    link: "https://monet-camping.netlify.app/",
-    gitLink: "https://github.com/moeinmnia80/camping-project",
-    webTitle: "Camping",
+    id: 0,
+    link: "",
+    gitLink: "https://github.com/moeinmnia80",
+    webTitle: "",
   },
 };
 const projectSlice = createSlice({

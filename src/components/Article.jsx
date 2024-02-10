@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import { Element } from "react-scroll";
-import articles from "../constants/articles.js";
 import { Link } from "react-router-dom";
 import articleImg from "../assets/images/article.png";
-import { routeHandler } from "../helpers/helpers.js";
-import AuthorImg from "../assets/images/profileAuther.jpg";
-import { FeedbackArticle } from "./FeedbackArticle.jsx";
 import { useQuery } from "@apollo/client";
 import { GET_BLOGS } from "../graphql/queries.js";
+import { CardPost } from "./CardPost.jsx";
 
 const Container = styled.div`
   display: flex;
@@ -55,58 +52,8 @@ export const Article = () => {
               </Link>
             </div>
             <Articles className={`to-up`}>
-              {articles.map((article) => (
-                <article
-                  key={article.id}
-                  className={`flex flex-col justify-between w-full h-full \ 
-                  bg-white border-[1px] border-[#eee] \
-                  shadow-lg duration-500 p-2 rounded-2xl text-center \
-                  dark:bg-[#eee]`}
-                >
-                  <div className={`w-full h-3/5`}>
-                    <img
-                      src={`${article.img}`}
-                      alt="article"
-                      className={`w-full h-4/5 object-cover rounded-t-2xl shadow-inner`}
-                    />
-                    <span
-                      className={`flex items-center justify-between w-full h-1/5 py-2 \
-                    border-b-[1px] border-[#eee] dark:border-[#00000022]`}
-                    >
-                      <div className={`flex items-center w-max h-full`}>
-                        <img
-                          src={`${AuthorImg}`}
-                          alt=""
-                          className={`w-6 h-6 object-cover rounded-full mr-2`}
-                        />
-                        <p
-                          className={`text-[10px] font-bold leading-none text-[#00000044]`}
-                        >
-                          Moein
-                        </p>
-                      </div>
-                      <FeedbackArticle article={article} />
-                    </span>
-                  </div>
-                  <h2
-                    className={`w-full h-max text-[13px] uppercase font-bold py-1`}
-                  >
-                    {article.title}
-                  </h2>
-                  <p
-                    className={`h-max px-2 pb-1 text-xs text-gray-400 dark:text-black`}
-                  >
-                    {article.summary}
-                  </p>
-                  <Link
-                    to={`/articles/${routeHandler(article.title)}`}
-                    className={`bg-[#1a1a1d] hover:bg-white text-center border-2 border-[#1a1a1d] \
-                    hover:text-[#1a1a1d] duration-300 p-2 rounded-xl text-white text-xs \ 
-                    dark:bg-[#1a1a1d] dark:text-[#eee] dark:hover:bg-[#eee] dark:hover:text-[#1a1a1d]`}
-                  >
-                    Read more
-                  </Link>
-                </article>
+              {data?.posts.map((post) => (
+                <CardPost {...post} key={post.id} />
               ))}
             </Articles>
           </Container>

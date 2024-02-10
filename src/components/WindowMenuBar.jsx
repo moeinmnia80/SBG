@@ -6,10 +6,18 @@ import { PortfolioItem } from "./PortfolioItem.jsx";
 import { PlusIcon } from "../assets/icons/PlusIcon.jsx";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { changeTab } from "../features/project/projectSlice.js";
 
 export const WindowMenuBar = () => {
+  const home = {
+    id: 0,
+    link: "",
+    gitLink: "https://github.com/moeinmnia80",
+    webTitle: "",
+  };
   const project = useSelector((state) => state.project.project);
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -17,7 +25,13 @@ export const WindowMenuBar = () => {
         className={`flex items-center w-full h-12 border-b-[1px] border-black bg-[#eee]`}
       >
         <div
-          className={`w-8 h-8 grid place-items-center border-[1px] border-black ml-2 rounded-md`}
+          className={`w-8 h-8 grid place-items-center border-[1px] border-black ml-2 rounded-md \
+          hover:bg-[#1a1a1d] hover:text-[#eee] duration-500 cursor-pointer ${
+            project.id === home.id
+              ? `bg-gradient-to-br from-[#FE5858] to-[#EE9617] text-[#eee]`
+              : `bg-transparent text-black`
+          }`}
+          onClick={() => dispatch(changeTab(home))}
         >
           S
         </div>

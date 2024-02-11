@@ -13,8 +13,8 @@ export const NavbarBlog = () => {
   return (
     <>
       <nav
-        className={`flex items-center justify-center w-full h-20 border-b-[1px] border-[#00000011] \ 
-        bg-[#ffffff22] dark:bg-[#1a1a1d] dark:border-[#ffffff22] backdrop-blur-xl pr-8 pl-6 sm:p-0`}
+        className={`sticky top-0 flex items-center justify-center w-full h-20 border-b-[1px] border-[#00000011] \ 
+        bg-[#ffffff22] dark:bg-[#00000022] dark:border-[#ffffff22] backdrop-blur-xl pr-8 pl-6 sm:p-0 z-20`}
       >
         <section className={`container flex items-center justify-between`}>
           <div className={`flex items-center justify-center w-max`}>

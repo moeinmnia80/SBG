@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_BLOG } from "../graphql/queries.js";
 import styled from "styled-components";
-import sanitizeHtml from "sanitize-html";
+// import sanitizeHtml from "sanitize-html";
+import { CommentForm } from "../components/CommentForm.jsx";
 
 const Container = styled.div`
   display: flex;
@@ -40,11 +41,13 @@ export const ArticleDetailPage = () => {
   return (
     <>
       <section
-        className={`flex items-start justify-center w-full min-h-[calc(100svh-14rem)] px-8 sm:p-0 mt-12 \
+        className={`flex items-start justify-center w-full min-h-[calc(100svh-14rem)] px-8 sm:p-0 sm:pt-12 \
         dark:bg-[#1a1a1d]`}
       >
         <Container className={`container`}>
-          <article className={`flex flex-col relative w-full h-full bg-white`}>
+          <article
+            className={`flex flex-col relative w-full h-full bg-white dark:bg-[#1a1a1d]`}
+          >
             <Header className={`w-full`}>
               <Banner className={`w-1/3 h-56 mr-2`}>
                 <img
@@ -75,14 +78,16 @@ export const ArticleDetailPage = () => {
                 </p>
               </section>
             </Header>
-            <Main className={`py-2`}>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: sanitizeHtml(data?.post.text.html),
-                }}
-              ></div>
+            <Main className={`py-2 overflow-hidden`}>
+              <p
+              // dangerouslySetInnerHTML={{
+              //   __html: sanitizeHtml(data?.post.text.html),
+              // }}
+              ></p>
+              {/*{data?.post.text.html}*/}
             </Main>
           </article>
+          <CommentForm />
         </Container>
       </section>
     </>

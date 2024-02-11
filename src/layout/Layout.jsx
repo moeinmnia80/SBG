@@ -13,10 +13,10 @@ export const Layout = ({ children }) => {
   }, [theme]);
   const { pathname } = useLocation();
   return (
-    <>
+    <section className={`w-full h-full bg-white dark:bg-[#1a1a1d]`}>
       {pathname === "/" ? <NavBar /> : <NavbarBlog />}
       {children}
       <Footer />
-    </>
+    </section>
   );
 };

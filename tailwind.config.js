@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 // tailwind.config.js
 const { nextui } = require("@nextui-org/theme");
 export default {
@@ -6,6 +7,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@nextui-org/theme/dist/components/breadcrumbs.js",
+    "./node_modules/@nextui-org/theme/dist/components/input.js",
     "./node_modules/@nextui-org/theme/dist/components/(breadcrumbs|snippet|code|input).js",
   ],
   darkMode: "class",

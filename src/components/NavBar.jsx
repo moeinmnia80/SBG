@@ -4,8 +4,7 @@ import logo from "../assets/images/logo.png";
 import logoDark from "../assets/images/logodark.png";
 import { Link } from "react-scroll";
 import { scrollHandler, tabHandler } from "../helpers/helpers.js";
-import { useDispatch, useSelector } from "react-redux";
-import { changeTheme } from "../features/theme/themeSlice.js";
+import { useSelector } from "react-redux";
 import { ThemeButton } from "./ThemeButton.jsx";
 import { BarsIcon } from "../assets/icons/BarsIcon.jsx";
 import { Menu } from "./Menu.jsx";
@@ -17,7 +16,6 @@ export const NavBar = () => {
   const [isShow, setIsShow] = useState(false);
   const nav = useRef();
   const theme = useSelector((store) => store.theme.theme);
-  const dispatch = useDispatch();
 
   useEffect(() => {
     setIsShow(true);

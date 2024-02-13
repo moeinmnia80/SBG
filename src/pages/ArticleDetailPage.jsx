@@ -5,6 +5,7 @@ import styled from "styled-components";
 // import sanitizeHtml from "sanitize-html";
 import { CommentForm } from "../components/CommentForm.jsx";
 import { CommentBox } from "../components/CommentBox.jsx";
+import { DateIcon } from "../assets/icons/DateIcon.jsx";
 // styled-components
 const Container = styled.div`
   display: flex;
@@ -45,21 +46,23 @@ export const ArticleDetailPage = () => {
       >
         <Container className={`container`}>
           <article
-            className={`flex flex-col relative w-full h-full bg-white dark:bg-[#1a1a1d]`}
+            className={`flex flex-col relative w-full h-full bg-white dark:bg-[#1a1a1d] pt-12`}
           >
-            <Header className={`w-full`}>
-              <Banner className={`w-1/3 h-56 mr-2`}>
+            <Header className={`flex flex-col sm:flex-row w-full`}>
+              <Banner className={`w-full sm:w-1/3 h-56 mr-2`}>
                 <img
                   src={`${data?.post?.backgroundArticle.url}`}
                   alt=""
                   className={`w-full h-full object-cover rounded-xl`}
                 />
               </Banner>
-              <section className={`flex flex-col items-start w-2/3 h-max p-4`}>
+              <section
+                className={`flex flex-col items-start justify-center w-full sm:w-2/3 h-max py-4 sm:p-4`}
+              >
                 <div
-                  className={`flex w-full justify-between  border-b-[1px] border-[#eee] pb-4`}
+                  className={`flex w-full items-center justify-between  border-b-[1px] border-[#eee] pb-4`}
                 >
-                  <div className={`flex items-center`}>
+                  <div className={`flex items-center h-max`}>
                     <img
                       src={`${data?.post?.author?.avatar.url}`}
                       alt="avatar"
@@ -69,13 +72,15 @@ export const ArticleDetailPage = () => {
                       {data?.post?.author.name}
                     </h3>
                   </div>
-                  <h1 className={`uppercase text-sm font-bold`}>
+                  <h1 className={`h-max uppercase text-sm font-bold`}>
                     {data?.post?.title}
                   </h1>
-                  <p className={`text-[11px]`}>
-                    <span className={`uppercase`}>published: </span>
-                    {data?.post?.datePublished}
-                  </p>
+                  <div
+                    className={`flex items-center justify-center h-max text-[11px]`}
+                  >
+                    <DateIcon style={`w-4 h-4 mr-1`} />
+                    <p className={`mt-1`}>{data?.post?.datePublished}</p>
+                  </div>
                 </div>
               </section>
             </Header>

@@ -30,7 +30,9 @@ export const ArticlesPage = () => {
     );
   if (error) return error.message;
   return (
-    <section className={`w-full h-full bg-white dark:bg-[#1a1a1d]`}>
+    <section
+      className={`w-full h-full bg-white dark:bg-[#1a1a1d] px-8 pt-12 mb-36 sm:mb-0`}
+    >
       <Container className={`container`}>
         <Articles className={`min-h-[calc(100svh-14rem)]`}>
           {data?.posts.map((post) => (

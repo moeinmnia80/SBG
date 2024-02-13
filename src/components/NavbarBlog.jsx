@@ -20,7 +20,7 @@ export const NavbarBlog = () => {
           <div className={`flex items-center justify-center w-max`}>
             <button
               onClick={() => navigate(-1)}
-              className={`flex p-2 hover:bg-[#eee] rounded-full duration-500 \
+              className={`hidden sm:flex p-2 hover:bg-[#eee] rounded-full duration-500 \
               dark:hover:bg-[#ffffff22]`}
             >
               <LeftArrow style={`w-5 h-5`} />
@@ -32,7 +32,7 @@ export const NavbarBlog = () => {
             >
               <HomeIcon style={`w-5 h-5`} />
             </Link>
-            <Breadcrumbs className={`ml-2 mt-1`}>
+            <Breadcrumbs className={`hidden sm:flex ml-2 mt-1`}>
               <BreadcrumbItem>
                 <Link to={`/`}>Home</Link>
               </BreadcrumbItem>
@@ -47,11 +47,7 @@ export const NavbarBlog = () => {
               <h1 className={`font-bold`}>SBG</h1>
               <span className={`text-sm text-[#888]`}>Article</span>
             </Link>
-            <ThemeButton
-              isDark={isDark}
-              setIsDark={setIsDark}
-              style={`hidden sm:flex`}
-            />
+            <ThemeButton isDark={isDark} setIsDark={setIsDark} style={`flex`} />
           </div>
         </section>
       </nav>

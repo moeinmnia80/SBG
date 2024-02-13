@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 import { ThemeButton } from "./ThemeButton.jsx";
 import { BarsIcon } from "../assets/icons/BarsIcon.jsx";
 import { Menu } from "./Menu.jsx";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link as Address } from "react-router-dom";
 
 export const NavBar = () => {
   const [topic, setTopic] = useState("");
@@ -75,7 +75,7 @@ export const NavBar = () => {
       <div
         className={`container flex justify-between items-center dark:text-white pr-4`}
       >
-        <Link
+        <Address
           to={`/`}
           className={`w-16 h-16 object-cover sm:hover:scale-110 sm:hover:rotate-180 transition-all \
            duration-500`}
@@ -85,7 +85,7 @@ export const NavBar = () => {
           ) : (
             <img src={`${logoDark}`} alt="logo" className={`w-full h-full`} />
           )}
-        </Link>
+        </Address>
         <ul
           className={`relative hidden md:flex items-center justify-center w-max h-12 text-sm`}
         >

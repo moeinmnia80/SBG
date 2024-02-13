@@ -6,7 +6,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@nextui-org/theme/dist/components/(breadcrumbs|snippet|code|input).js",
+    "./node_modules/@nextui-org/theme/dist/components/(breadcrumbs|snippet|code|input|spinner).js",
   ],
   darkMode: "class",
   theme: {

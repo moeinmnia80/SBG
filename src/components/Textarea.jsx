@@ -1,7 +1,14 @@
-export const Textarea = ({ className }) => {
+export const Textarea = ({ className, value, onChange }) => {
   return (
     <>
-      <div className={className}></div>
+      <textarea
+        name="text"
+        id="comment"
+        className={`${className}`}
+        placeholder={`Description`}
+        value={value}
+        onChange={onChange}
+      ></textarea>
     </>
   );
 };

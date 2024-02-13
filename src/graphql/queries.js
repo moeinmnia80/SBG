@@ -70,6 +70,18 @@ const GET_BLOG = gql`
         url
       }
       datePublished
+      comments {
+        name
+        lastName
+        text
+        datePublished
+        subComments {
+          name
+          lastName
+          text
+          datePublished
+        }
+      }
     }
   }
 `;

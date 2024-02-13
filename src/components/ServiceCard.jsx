@@ -28,12 +28,13 @@ export const ServiceCard = ({ service }) => {
           className={`grid place-items-center h-full text-center text-[12px] font-bold \
            group-hover/cart:border-b-[1px] group-hover/cart:border-[#1a1a1d] p-2 bg-white   \
            dark:bg-[#eee] duration-500 group-hover/services:visible \
-           rounded-t-md group-hover/cart:h-16 group-hover/cart:bg-[#eee] `}
+           rounded-t-md group-hover/cart:h-16 group-hover/cart:bg-[#eee] dark:text-[#1a1a1d] `}
         >
           {service.title}
         </h2>
         <p
-          className={`grid place-items-center h-0 text-[11px] text-justify p-4 `}
+          className={`grid place-items-center h-0 text-[11px] text-justify p-4 \
+          dark:text-[#888]`}
         >
           {service.text}
         </p>

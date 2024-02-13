@@ -62,7 +62,7 @@ export const Portfolio = () => {
                   bg-white dark:bg-[#1a1a1d] dark:text-white`}
                 >
                   <p
-                    className={`uppercase font-bold tracking-widest bg-[#eee]`}
+                    className={`uppercase font-bold tracking-widest bg-[#eee] dark:text-[#1a1a1d] p-1`}
                   >
                     Select from the bar above to see my projects
                   </p>

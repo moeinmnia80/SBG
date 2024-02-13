@@ -4,7 +4,8 @@ import { GET_BLOG } from "../graphql/queries.js";
 import styled from "styled-components";
 // import sanitizeHtml from "sanitize-html";
 import { CommentForm } from "../components/CommentForm.jsx";
-
+import { CommentBox } from "../components/CommentBox.jsx";
+// styled-components
 const Container = styled.div`
   display: flex;
   align-items: center;
@@ -13,23 +14,21 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
 `;
-
 const Banner = styled.div`
   height: 100%;
 `;
-
 const Header = styled.div`
   display: flex;
   justify-items: center;
   justify-content: space-between;
 `;
-
 const Main = styled.div`
   display: flex;
 `;
 export const ArticleDetailPage = () => {
   const { slug } = useParams();
   const { loading, data, error } = useQuery(GET_BLOG, { variables: { slug } });
+  console.log(data);
   if (loading) {
     return (
       <div className={`grid place-items-center w-full h-svh dark:bg-[#1a1a1d]`}>
@@ -56,38 +55,41 @@ export const ArticleDetailPage = () => {
                   className={`w-full h-full object-cover rounded-xl`}
                 />
               </Banner>
-              <section
-                className={`flex items-start justify-between w-2/3 h-max border-b-[1px] border-[#eee] p-4`}
-              >
-                <div className={`flex items-center`}>
-                  <img
-                    src={`${data?.post?.author?.avatar.url}`}
-                    alt="avatar"
-                    className={`w-6 h-6 rounded-full`}
-                  />
-                  <h3 className={`text-[11px] ml-2`}>
-                    {data?.post?.author.name}
-                  </h3>
+              <section className={`flex flex-col items-start w-2/3 h-max p-4`}>
+                <div
+                  className={`flex w-full justify-between  border-b-[1px] border-[#eee] pb-4`}
+                >
+                  <div className={`flex items-center`}>
+                    <img
+                      src={`${data?.post?.author?.avatar.url}`}
+                      alt="avatar"
+                      className={`w-6 h-6 rounded-full`}
+                    />
+                    <h3 className={`text-[11px] ml-2`}>
+                      {data?.post?.author.name}
+                    </h3>
+                  </div>
+                  <h1 className={`uppercase text-sm font-bold`}>
+                    {data?.post?.title}
+                  </h1>
+                  <p className={`text-[11px]`}>
+                    <span className={`uppercase`}>published: </span>
+                    {data?.post?.datePublished}
+                  </p>
                 </div>
-                <h1 className={`uppercase text-sm font-bold`}>
-                  {data?.post?.title}
-                </h1>
-                <p className={`text-[11px]`}>
-                  <span className={`uppercase`}>published: </span>
-                  {data?.post?.datePublished}
-                </p>
               </section>
             </Header>
             <Main className={`py-2 overflow-hidden`}>
+              <div dangerouslySetInnerHTML={{ __html: data?.post.text.html }} />
               <p
               // dangerouslySetInnerHTML={{
               //   __html: sanitizeHtml(data?.post.text.html),
               // }}
               ></p>
-              {/*{data?.post.text.html}*/}
             </Main>
           </article>
-          <CommentForm />
+          <CommentForm slug={slug} />
+          <CommentBox comments={data?.post.comments} />
         </Container>
       </section>
     </>

@@ -6,8 +6,6 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@nextui-org/theme/dist/components/breadcrumbs.js",
-    "./node_modules/@nextui-org/theme/dist/components/input.js",
     "./node_modules/@nextui-org/theme/dist/components/(breadcrumbs|snippet|code|input).js",
   ],
   darkMode: "class",

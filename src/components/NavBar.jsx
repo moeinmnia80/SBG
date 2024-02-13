@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import { ThemeButton } from "./ThemeButton.jsx";
 import { BarsIcon } from "../assets/icons/BarsIcon.jsx";
 import { Menu } from "./Menu.jsx";
+import { useLocation } from "react-router-dom";
 
 export const NavBar = () => {
   const [topic, setTopic] = useState("");
@@ -16,6 +17,7 @@ export const NavBar = () => {
   const [isShow, setIsShow] = useState(false);
   const nav = useRef();
   const theme = useSelector((store) => store.theme.theme);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     setIsShow(true);
@@ -34,15 +36,21 @@ export const NavBar = () => {
     theme === "dark" ? setIsDark(true) : setIsDark(false);
   }, [theme]);
   let prevScrollpos = window.scrollY;
-  window.onscroll = function () {
-    const currentScrollPos = window.scrollY;
-    if (prevScrollpos > currentScrollPos) {
-      nav.current.style.top = "0";
-    } else {
-      nav.current.style.top = "-80px";
-    }
-    prevScrollpos = currentScrollPos;
-  };
+  useEffect(() => {
+    const scrollNavbar = () => {
+      const currentScrollPos = window.scrollY;
+      if (prevScrollpos > currentScrollPos) {
+        nav.current.style.top = "0";
+      } else {
+        nav.current.style.top = "-80px";
+      }
+      prevScrollpos = currentScrollPos;
+    };
+    document.addEventListener("scroll", scrollNavbar);
+    return () => {
+      document.removeEventListener("scroll", scrollNavbar);
+    };
+  }, []);
   useEffect(() => {
     window.addEventListener("scroll", () => scrollHandler(setTopic));
     return () => {

@@ -157,3 +157,34 @@
         box-shadow: .2em -.2em 0 0 currentcolor;
     }
 }
+/* comments box */
+.comment-form{
+    position: relative;
+    left: 100%;
+}
+.comment-form-in {
+    position: relative;
+    left: 0;
+    animation: is-out-in 3s linear;
+}
+.comment-form-out{
+    position: relative;
+    left: 100%;
+    animation: is-in-out 3s linear;
+}
+@keyframes is-in-out {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+    }
+}
+@keyframes is-out-in {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+    }
+}

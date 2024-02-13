@@ -20,13 +20,15 @@ export const NavbarBlog = () => {
           <div className={`flex items-center justify-center w-max`}>
             <button
               onClick={() => navigate(-1)}
-              className={`flex p-2 hover:bg-[#eee] rounded-full duration-500`}
+              className={`flex p-2 hover:bg-[#eee] rounded-full duration-500 \
+              dark:hover:bg-[#ffffff22]`}
             >
               <LeftArrow style={`w-5 h-5`} />
             </button>
             <Link
               to={`/`}
-              className={`flex p-2 hover:bg-[#eee] rounded-full ml-2 duration-500`}
+              className={`flex p-2 hover:bg-[#eee] rounded-full ml-2 duration-500 \ 
+              dark:hover:bg-[#ffffff22]`}
             >
               <HomeIcon style={`w-5 h-5`} />
             </Link>

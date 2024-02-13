@@ -69,6 +69,7 @@ const GET_BLOG = gql`
       backgroundArticle {
         url
       }
+      postData
       datePublished
       comments {
         name

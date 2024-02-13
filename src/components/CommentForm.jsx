@@ -64,9 +64,7 @@ export const CommentForm = ({ slug }) => {
   return (
     <>
       <ToastContainer />
-      <section
-        className={`relative flex w-full h-max mt-[25rem] overflow-hidden`}
-      >
+      <section className={`relative flex w-full h-max pt-12 overflow-hidden`}>
         <button
           className={`flex items-center justify-center w-full sm:w-max py-4 px-8 text-white bg-[#C62128] \
           border-3 border-transparent rounded-xl \ 

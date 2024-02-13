@@ -188,3 +188,25 @@
         left: 100%;
     }
 }
+
+@layer components{
+    .title{
+        @apply text-[#1a1a1d] dark:text-white text-[2rem] font-bold;
+    }
+    .title-mid{
+        @apply text-[2rem] my-2;
+    }
+    .description{
+        @apply h-max text-[#888] my-2 text-justify leading-8 px-4;
+    }
+    .description strong{
+        @apply text-[#1a1a1d] dark:text-blue-500;
+    }
+    .description code{
+        @apply text-blue-500 bg-[#00000022] dark:bg-[#ffffff22] p-1 rounded-md;
+    }
+    .code {
+        @apply flex w-max text-[14px] text-white dark:text-[#1a1a1d] bg-[#00000055] dark:bg-[#ffffff22]
+        rounded-md p-2 my-4;
+    }
+}

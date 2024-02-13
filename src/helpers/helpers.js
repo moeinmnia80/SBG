@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { toast } from "react-toastify";
+
 const tabHandler = (topic) => {
   switch (topic) {
     case "home":
@@ -57,4 +60,24 @@ const scrollHandler = (setTopic) => {
   }
 };
 
-export { tabHandler, observer, scrollHandler, observerToUp };
+const copyFromCodeTag = () => {
+  const codeTag = document.querySelectorAll("code");
+  const copyContentHandler = (e) => {
+    const content = e.target.innerText;
+    navigator.clipboard
+      .writeText(`${content}`)
+      .then((res) =>
+        toast.success("copied!", { position: "top-center", theme: "dark" }),
+      );
+  };
+  codeTag.forEach((code) =>
+    code.addEventListener("click", (e) => copyContentHandler(e)),
+  );
+  return () => {
+    codeTag.forEach((code) =>
+      code.removeEventListener("click", copyContentHandler),
+    );
+  };
+};
+
+export { tabHandler, observer, scrollHandler, observerToUp, copyFromCodeTag };

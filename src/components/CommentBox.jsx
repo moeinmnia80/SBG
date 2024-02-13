@@ -21,7 +21,7 @@ export const CommentBox = ({ comments }) => {
               className={`w-full h-max bg-[#00000022] dark:bg-[#ffffff22] rounded-lg p-8`}
             >
               <CommentUserInfo comment={comment} />
-              <div className={`indent-14 mt-4`}>{comment.text}</div>
+              <div className={`px-14 mt-4`}>{comment.text}</div>
             </div>
           ))
         )}

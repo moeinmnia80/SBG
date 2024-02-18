@@ -8,12 +8,12 @@ export const AboutUs = () => {
   useEffect(() => {
     const hiddenElement = document.querySelectorAll(".not-show");
     hiddenElement.forEach((el) => observer.observe(el));
-  }, [window.scrollY]);
+  }, []);
 
   return (
     <>
       <Element
-        className={`container min-h-svh flex items-center justify-center px-8`}
+        className={`container flex items-center justify-center min-h-svh px-8 py-12`}
         name={`aboutus`}
         id={`aboutus`}
       >
@@ -29,7 +29,7 @@ export const AboutUs = () => {
               />
             </div>
             <p
-              className={`not-show text-black text-sm mt-2  px-8 md:p-0 dark:text-[#eee]`}
+              className={`not-show text-black text-sm mt-2 px-8 dark:text-secondary md:p-0`}
             >
               Welcome to the SBG Programming Group website! We are a team of
               Front-End developers who passionately pursue our ideals to create

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_BLOGS } from "../graphql/queries.js";
 import { CardPost } from "../components/CardPost.jsx";
+import { useEffect } from "react";
 
 const Container = styled.div`
   display: flex;
@@ -13,7 +14,7 @@ const Container = styled.div`
 `;
 const Articles = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 16.875rem));
   grid-template-rows: repeat(auto-fit, 25rem);
   grid-auto-rows: 25rem;
   place-content: center;
@@ -22,6 +23,9 @@ const Articles = styled.section`
 `;
 export const ArticlesPage = () => {
   const { loading, data, error } = useQuery(GET_ALL_BLOGS);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   if (loading)
     return (
       <div className={`grid place-items-center w-full h-svh`}>

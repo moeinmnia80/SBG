@@ -9,7 +9,7 @@
 /****** scrollbar ******/
     /* width */
 ::-webkit-scrollbar {
-    width: 0;
+    width: 10px;
     height: 0;
 }
     /* Track */
@@ -191,22 +191,63 @@
 
 @layer components{
     .title{
-        @apply text-[#1a1a1d] dark:text-white text-[2rem] font-bold;
+        @apply text-primary dark:text-white text-[2rem] font-bold;
     }
     .title-mid{
-        @apply text-[2rem] my-2;
+        @apply text-[2rem] my-4;
     }
     .description{
         @apply h-max text-[#888] my-2 text-justify leading-8 px-4;
     }
     .description strong{
-        @apply text-[#1a1a1d] dark:text-blue-500;
+        @apply text-primary dark:text-blue-500;
     }
     .description code{
         @apply text-blue-500 bg-[#00000022] dark:bg-[#ffffff22] p-1 rounded-md;
     }
     .code {
-        @apply flex w-max text-[14px] text-white dark:text-[#1a1a1d] bg-[#00000055] dark:bg-[#ffffff22]
+        @apply flex w-max text-[14px] text-white dark:text-primary bg-[#00000055] dark:bg-[#ffffff22]
         rounded-md p-2 my-4;
+    }
+    /*home > description*/
+
+    .home-description-icon{
+        @apply text-black hover:text-[#1EEB31] dark:text-secondary dark:hover:text-third transition-all duration-500
+    }
+    /*aboutus > article*/
+
+    .aboutus{
+        @apply grid place-items-center place-content-center mt-8 w-full h-max gap-8
+        grid-rows-[minmax(15rem,20rem)_minmax(15rem,20rem)_minmax(15rem,20rem)]
+        grid-cols-[minmax(10rem,20rem)]
+        sm:grid-rows-2 sm:grid-cols-2
+        md:grid-rows-2 md:grid-cols-[minmax(10rem,15rem)_minmax(10rem,15rem)]
+        lg:grid-cols-[minmax(10rem,15rem)_minmax(10rem,15rem)_minmax(10rem,15rem)] lg:grid-rows-1
+        text-justify
+    }
+    .aboutus-article{
+        @apply flex flex-col w-full h-full rounded-md;
+    }
+    .aboutus-article-title{
+        @apply text-white text-center font-bold text-2xl p-4 md:p-4;
+    }
+    .aboutus-article-text {
+        @apply h-full text-black text-sm bg-white p-4 m-1 rounded-b-md dark:text-white dark:bg-primary  md:p-4;
+    }
+    /*aboutus > skills*/
+    .aboutus-skills-icon{
+        @apply w-8 h-max transition-all duration-300 dark:text-secondary
+    }
+
+    /*services > card*/
+    .services-card-selector-right{
+        @apply w-4 h-full bg-white border-r-1 border-primary duration-500 transition-all
+        group-hover/cart:bg-gradient-to-br group-hover/cart:from-[#FE5858] group-hover/cart:to-[#EE9617]
+        dark:bg-secondary
+    }
+    .services-card-selector-left{
+        @apply w-4 h-full bg-white border-l-1 border-primary duration-500 transition-all
+        group-hover/cart:bg-gradient-to-br group-hover/cart:from-[#FE5858] group-hover/cart:to-[#EE9617]
+        dark:bg-secondary
     }
 }

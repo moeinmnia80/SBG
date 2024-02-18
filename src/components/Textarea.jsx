@@ -8,6 +8,7 @@ export const Textarea = ({ className, value, onChange }) => {
         placeholder={`Description`}
         value={value}
         onChange={onChange}
+        autoFocus={false}
       ></textarea>
     </>
   );

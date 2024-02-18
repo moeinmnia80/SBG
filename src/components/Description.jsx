@@ -9,7 +9,7 @@ export const Description = () => {
       <BlueBlobIcon style={`absolute top-0 left-0 w-full h-full z-0`} />
       <div
         className={`text-sm \
-        text-[#aaa] dark:text-[#eee] side-text`}
+        text-[#aaa] dark:text-secondary side-text`}
       >
         front-end developer - SBG
       </div>
@@ -23,25 +23,19 @@ export const Description = () => {
       <div className={`relative side-icon flex gap-4 `}>
         <Link
           to={`https://www.instagram.com/scorpionbitesgroup`}
-          className={`text-black hover:text-[#1EEB31] dark:text-[#eee] dark:hover:text-[#C62128] transition-all duration-500`}
+          className={`home-description-icon`}
         >
           <FaInstagram />
         </Link>
-        <Link
-          to={`https://www.linkedin.com/in/moeinmnia/`}
-          className={`text-black hover:text-[#1EEB31] dark:text-[#eee] dark:hover:text-[#C62128] transition-all duration-500`}
-        >
+        <Link to={`https://www.linkedin.com/in/moeinmnia/`} className={``}>
           <FaLinkedinIn />
         </Link>
-        <Link
-          to={`/`}
-          className={`text-black hover:text-[#1EEB31] dark:text-[#eee] dark:hover:text-[#C62128] transition-all duration-500`}
-        >
+        <Link to={`/`} className={`home-description-icon`}>
           <FaYoutube />
         </Link>
         <Link
           to={`https://github.com/moeinmnia80`}
-          className={`text-black hover:text-[#1EEB31] dark:text-[#eee] dark:hover:text-[#C62128] transition-all duration-500`}
+          className={`home-description-icon`}
         >
           <FaGithub />
         </Link>

@@ -44,23 +44,23 @@ export const WindowMenuBar = () => {
           <span
             className={`hidden sm:flex items-center w-max h-full border-l-[1px] border-black`}
           >
-            <PlusIcon style={`w-4 h-4 ml-2`} />
+            <PlusIcon style={`w-4 h-4 ml-2 text-[#1a1a1d]`} />
           </span>
         </div>
         <div
-          className={`flex items-center justify-evenly w-32 h-full font-bold`}
+          className={`flex items-center justify-evenly w-32 h-full font-bold z-20`}
         >
           <Link
-            className={`bottom-4 right-4 w-4 h-4 mr-4`}
+            className={`bottom-4 right-4 w-4 h-4 mr-4 text-[#1a1a1d]`}
             to={project.gitLink}
           >
             <FaGithub
               className={`w-full h-full hover:text-purple-800 duration-300`}
             />
           </Link>
-          <MinimizeIcon style={`w-4 h-4`} />
-          <MagnificationIcon style={`w-4 h-4`} />
-          <CrossIcon style={`w-4 h-4`} />
+          <MinimizeIcon style={`w-4 h-4 text-[#1a1a1d]`} />
+          <MagnificationIcon style={`w-4 h-4 text-[#1a1a1d]`} />
+          <CrossIcon style={`w-4 h-4 text-[#1a1a1d]`} />
         </div>
       </div>
     </>

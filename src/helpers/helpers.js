@@ -20,7 +20,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
-    } else {
+    } else if (window.scrollY < entry.target.offsetTop) {
       entry.target.classList.remove("show");
     }
   });
@@ -29,7 +29,7 @@ const observerToUp = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("to-up-show");
-    } else {
+    } else if (window.scrollY < entry.target.offsetTop) {
       entry.target.classList.remove("to-up-show");
     }
   });

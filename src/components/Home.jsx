@@ -8,8 +8,7 @@ export const Home = () => {
       <Element
         name={`home`}
         id={`home`}
-        className={`relative container h-screen overflow-hidden flex flex-col items-center \
-        justify-center`}
+        className={`relative container h-svh overflow-hidden flex flex-col items-center justify-center`}
       >
         <div
           className={`flex items-center justify-between w-full h-full animate-fadeUp select-none px-8`}

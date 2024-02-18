@@ -16,8 +16,8 @@ const Container = styled.div`
 `;
 const Articles = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  grid-template-rows: repeat(auto-fit, 25rem);
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 16.875rem));
+  grid-template-rows: repeat(auto-fit, minmax(25rem, 1fr));
   grid-auto-rows: 25rem;
   place-content: center;
   gap: 2.5rem;
@@ -30,21 +30,22 @@ export const Article = () => {
     <>
       <Element name={`articles`} id={`articles`}>
         <section
-          className={`grid place-items-center w-full min-h-svh py-12 px-8 pb-36 lg:pb-0`}
+          className={`grid place-items-center w-full min-h-svh py-12 px-8 pb-36 xl:pb-0`}
         >
           <Container className={`container`}>
             <div
-              className={`to-up flex items-center justify-between w-full h-12 mb-8`}
+              className={`to-up flex content-center items-center justify-center sm:justify-between \
+              w-full h-max sm:h-12 mb-8`}
             >
               <img
                 src={`${articleImg}`}
                 alt="articles"
-                className={`w-max h-full object-contain`}
+                className={`w-1/3 sm:w-max h-full object-contain`}
               />
               <Link
                 to={`articles`}
-                className={`px-8 py-1 border-[1px] border-[#1a1a1d] rounded-md \ 
-                hover:bg-[#1a1a1d] hover:text-white \
+                className={`hidden sm:flex px-8 py-1 border-[1px] border-[#1a1a1d] rounded-md \ 
+                hover:bg-[#1a1a1d] hover:text-white text-center \
                 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-[#1a1a1d] \
                 duration-300`}
               >

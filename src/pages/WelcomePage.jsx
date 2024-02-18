@@ -11,7 +11,7 @@ export const WelcomePage = () => {
     document
       .querySelectorAll(".to-up")
       .forEach((section) => observerToUp.observe(section));
-  }, [window.scrollY]);
+  }, [scrollY]);
   return (
     <section className={`bg-white dark:bg-[#1a1a1d]`}>
       <Home />

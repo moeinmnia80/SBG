@@ -92,6 +92,7 @@ export const CommentForm = ({ slug }) => {
             value={formData.name}
             className={`sm:row-start-1 sm:row-end-2 sm:col-start-1 sm:col-end-2 rounded-xl`}
             onChange={(e) => changeFormDataHandler(e)}
+            autoFocus={false}
           />
           <Input
             type="text"
@@ -101,6 +102,7 @@ export const CommentForm = ({ slug }) => {
             value={formData.lastName}
             className={`sm:row-start-2 sm:row-end-3 sm:col-start-1 sm:col-end-2 rounded-xl`}
             onChange={(e) => changeFormDataHandler(e)}
+            autoFocus={false}
           />
           <Textarea
             className={`max-w-full h-full sm:row-start-1 sm:row-end-3 sm:col-start-2 sm:col-end-4 bg-transparent rounded-xl \

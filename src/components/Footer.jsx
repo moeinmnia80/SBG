@@ -40,6 +40,7 @@ export const Footer = () => {
                 placeholder={`Name`}
                 className={`w-full sm:w-1/2 md:w-1/3 h-12 bg-[#ffffff44] p-2 outline-none rounded-md text-sm placeholder:text-[#eee]`}
                 onChange={(e) => changeEmailDataHandler(e)}
+                autoFocus={false}
               />
               <input
                 type="email"
@@ -49,6 +50,7 @@ export const Footer = () => {
                 placeholder={`E-mail`}
                 className={`w-full sm:w-1/2 md:w-1/3 h-12 bg-[#ffffff44] p-2 outline-none rounded-md text-sm placeholder:text-[#eee]`}
                 onChange={(e) => changeEmailDataHandler(e)}
+                autoFocus={false}
               />
               <input
                 type="text"
@@ -58,6 +60,7 @@ export const Footer = () => {
                 className={`w-full md:w-1/3 lg:focus:w-2/3 h-12 bg-[#ffffff44] p-2 outline-none rounded-md text-sm \ 
                 duration-500 placeholder:text-[#eee]`}
                 onChange={(e) => changeEmailDataHandler(e)}
+                autoFocus={false}
               />
             </div>
             <button

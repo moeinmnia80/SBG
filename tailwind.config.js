@@ -25,7 +25,11 @@ export default {
         sans: ["IranSansX"],
       },
       backgroundImage: {},
-      colors: {},
+      colors: {
+        primary: `#1a1a1d`,
+        secondary: `#eee`,
+        third: `#C62128`,
+      },
       backgroundSize: {
         500: "500%",
       },

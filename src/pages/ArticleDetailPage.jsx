@@ -39,8 +39,13 @@ const Main = styled.div`
 export const ArticleDetailPage = () => {
   const { slug } = useParams();
   const { loading, data, error } = useQuery(GET_BLOG, { variables: { slug } });
+
   useEffect(() => {
     copyFromCodeTag();
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   if (loading) {

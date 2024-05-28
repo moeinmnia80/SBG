@@ -45,11 +45,6 @@ const servicesItems = [
     title: `Progressive Web Apps (PWA) Development`,
     text: `Creating and optimizing Progressive Web Apps for a better offline experience.`,
   },
-  {
-    id: 9,
-    title: `Progressive Web Apps (PWA) Development`,
-    text: `Creating and optimizing Progressive Web Apps for a better offline experience.`,
-  },
 ];
 
 export default servicesItems;

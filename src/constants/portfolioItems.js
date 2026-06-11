@@ -7,12 +7,6 @@ const portfolioItems = [
   },
   {
     id: 2,
-    link: "https://scorpionbitesgroup.vercel.app",
-    gitLink: "https://github.com/moeinmnia80/SBG",
-    webTitle: "ScorpionBitesGroup",
-  },
-  {
-    id: 3,
     link: "https://beauty-a.netlify.app/",
     gitLink: "https://github.com/moeinmnia80/shopping-BeautyA",
     webTitle: "BeautyA",

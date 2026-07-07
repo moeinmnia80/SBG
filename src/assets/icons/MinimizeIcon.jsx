@@ -1,4 +1,4 @@
-export const MinimizeIcon = ({ style }) => {
+export const MinimizeIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -7,7 +7,7 @@ export const MinimizeIcon = ({ style }) => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className={`${style}`}
+        {...props}
       >
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
       </svg>

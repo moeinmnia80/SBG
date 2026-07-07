@@ -38,7 +38,7 @@ const Main = styled.div`
 `;
 export const ArticleDetailPage = () => {
   const { slug } = useParams();
-  const { loading, data, error } = useQuery(GET_BLOG, { variables: { slug } });
+  const { loading, data } = useQuery(GET_BLOG, { variables: { slug } });
 
   useEffect(() => {
     copyFromCodeTag();
@@ -67,7 +67,7 @@ export const ArticleDetailPage = () => {
             className={`flex flex-col relative w-full h-full bg-white dark:bg-[#1a1a1d] pt-12`}
           >
             <Header
-              className={`flex flex-col w-full border-b-1 \
+              className={`flex flex-col w-full border-b-1 
               dark:border-[#ffffff22] border-[#eee] pb-12`}
             >
               <div

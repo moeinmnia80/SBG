@@ -27,16 +27,16 @@ export const DropDown = ({ setIsOpen }) => {
   return (
     <>
       <Dropdown
-        className={`bottom-[calc(100%+.5rem)] right-0\ 
-                bg-white rounded-md \ 
-                p-2 border-[1px] border-[#00000022] \ 
+        className={`bottom-[calc(100%+.5rem)] right-0
+                bg-white rounded-md  
+                p-2 border-[1px] border-[#00000022] 
                 dark:bg-[#1a1a1d] dark:border-[#ffffff33]`}
         ref={domNode}
       >
         <button
-          className={`flex items-center w-56 p-3 hover:bg-[#eee] \
-                  border-[1px] border-white hover:border-[#00000022] \
-                  rounded-md duration-500 text-left text-[#1a1a1d] \ 
+          className={`flex items-center w-56 p-3 hover:bg-[#eee] 
+                  border-[1px] border-white hover:border-[#00000022] 
+                  rounded-md duration-500 text-left text-[#1a1a1d] 
                   dark:border-[#1a1a1d] dark:hover:bg-[#ffffff22] dark:text-[#eee] \
                    dark:hover:border-[#ffffff44]`}
           onClick={() => setIsOpen(false)}
@@ -50,10 +50,10 @@ export const DropDown = ({ setIsOpen }) => {
           </span>
         </button>
         <button
-          className={`flex items-center w-56 p-3 hover:bg-[#eee] \
-                  border-[1px] border-white hover:border-[#00000022] \
-                  rounded-md duration-500 text-left text-[#1a1a1d] \ 
-                  dark:border-[#1a1a1d] dark:hover:bg-[#ffffff22] dark:text-[#eee] \
+          className={`flex items-center w-56 p-3 hover:bg-[#eee] 
+                  border-[1px] border-white hover:border-[#00000022] 
+                  rounded-md duration-500 text-left text-[#1a1a1d] 
+                  dark:border-[#1a1a1d] dark:hover:bg-[#ffffff22] dark:text-[#eee]
                    dark:hover:border-[#ffffff44]`}
           onClick={() => setIsOpen(false)}
         >

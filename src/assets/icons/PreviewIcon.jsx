@@ -1,11 +1,11 @@
-export const PreviewIcon = ({ style }) => {
+export const PreviewIcon = ({ ...props }) => {
   return (
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className={`${style}`}
+        {...props}
       >
         <path
           fillRule="evenodd"

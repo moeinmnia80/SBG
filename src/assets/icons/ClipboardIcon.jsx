@@ -1,4 +1,4 @@
-export const ClipboardIcon = ({ style }) => {
+export const ClipboardIcon = ({ ...props }) => {
   return (
     <>
       <button>
@@ -8,7 +8,7 @@ export const ClipboardIcon = ({ style }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className={`${style}`}
+          {...props}
         >
           <path
             strokeLinecap="round"

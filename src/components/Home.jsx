@@ -1,4 +1,3 @@
-import { NavBar } from "./NavBar.jsx";
 import { Description } from "./Description.jsx";
 import { Element } from "react-scroll";
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styled from "styled-components";
 import logo from "../assets/images/logo.png";
 import logoDark from "../assets/images/logodark.png";
@@ -82,13 +83,13 @@ export const Menu = ({
               smooth={true}
               duration={1000}
               key={menuItem.id}
-              className={`w-full p-4 border-b-[1px] border-[#ccc] dark:border-[#C62128] \
+              className={`w-full p-4 border-b-[1px] border-[#ccc] dark:border-[#C62128]
                      ${
                        topic === menuItem.name.toLowerCase()
-                         ? `bg-gradient-to-r from-[#1EEB31] to-[#AEFF02] \ 
+                         ? `bg-gradient-to-r from-[#1EEB31] to-[#AEFF02] 
                             dark:bg-gradient-to-br dark:from-[#A00000] dark:to-[#C62128]`
                          : ``
-                     } \
+                     }
                      `}
               onClick={(e) => menuTopicHandler(e)}
             >

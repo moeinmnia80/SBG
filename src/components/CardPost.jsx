@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 import { FeedbackArticle } from "./FeedbackArticle.jsx";
 import { Link } from "react-router-dom";
+// eslint-disable-next-line react/prop-types
 export const CardPost = ({ author, img, slug, summary, title }) => {
   return (
     <>
@@ -11,7 +13,7 @@ export const CardPost = ({ author, img, slug, summary, title }) => {
       >
         <div className={`w-full h-3/5`}>
           <img
-            src={`${img.url}`}
+            src={`${img?.url}`}
             alt="article"
             className={`w-full h-4/5 object-cover rounded-t-2xl shadow-inner`}
           />

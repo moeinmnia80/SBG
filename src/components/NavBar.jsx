@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 import { ThemeButton } from "./ThemeButton.jsx";
 import { BarsIcon } from "../assets/icons/BarsIcon.jsx";
 import { Menu } from "./Menu.jsx";
-import { useLocation, Link as Address } from "react-router-dom";
+import { Link as Address } from "react-router-dom";
 
 export const NavBar = () => {
   const [topic, setTopic] = useState("");
@@ -17,7 +17,6 @@ export const NavBar = () => {
   const [isShow, setIsShow] = useState(false);
   const nav = useRef();
   const theme = useSelector((store) => store.theme.theme);
-  const { pathname } = useLocation();
 
   useEffect(() => {
     setIsShow(true);
@@ -68,7 +67,7 @@ export const NavBar = () => {
     <nav
       className={`fixed top-0 w-full h-max bg-white ${
         isShow ? `` : `-translate-y-full`
-      } transition-all duration-1000 z-50 dark:bg-[#1a1a1d] \ 
+      } transition-all duration-1000 z-50 dark:bg-[#1a1a1d] 
       border-b-[1px] border-[#eee] dark:border-[#ffffff22]`}
       ref={nav}
     >
@@ -92,9 +91,9 @@ export const NavBar = () => {
           <span
             className={`absolute ${tabHandler(
               topic,
-            )} w-[calc(100%/5)] h-8 -z-50  shadow-sm\
-             bg-gradient-to-r from-[#1EEB31] to-[#AEFF02] \ 
-             dark:bg-gradient-to-br dark:from-[#A00000] dark:to-[#C62128] \
+            )} w-[calc(100%/5)] h-8 -z-50  shadow-sm
+             bg-gradient-to-r from-[#1EEB31] to-[#AEFF02]
+             dark:bg-gradient-to-br dark:from-[#A00000] dark:to-[#C62128]
              rounded-full transition-all duration-500`}
           ></span>
           {menu.map((item) => (

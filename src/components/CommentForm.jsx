@@ -9,6 +9,7 @@ import { Spinner } from "@nextui-org/spinner";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// eslint-disable-next-line react/prop-types
 export const CommentForm = ({ slug }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ export const CommentForm = ({ slug }) => {
   };
 
   const { name, lastName, text, datePublished } = formData;
-  const [sendComment, { loading, data }] = useMutation(SEND_COMMENT, {
+  const [sendComment, { loading }] = useMutation(SEND_COMMENT, {
     variables: {
       name,
       lastName,
@@ -66,10 +67,10 @@ export const CommentForm = ({ slug }) => {
       <ToastContainer />
       <section className={`relative flex w-full h-max pt-12 overflow-hidden`}>
         <button
-          className={`flex items-center justify-center w-full sm:w-max py-4 px-8 text-white bg-[#C62128] \
-          border-3 border-transparent rounded-xl \ 
-          hover:bg-transparent hover:text-[#C62128] hover:border-3 hover:border-[#C62128] \
-          duration-700 dark:bg-[#C62128] dark:hover:text-[#ffffff55] dark:hover:border-[#ffffff44] \
+          className={`flex items-center justify-center w-full sm:w-max py-4 px-8 text-white bg-[#C62128]
+          border-3 border-transparent rounded-xl 
+          hover:bg-transparent hover:text-[#C62128] hover:border-3 hover:border-[#C62128] 
+          duration-700 dark:bg-[#C62128] dark:hover:text-[#ffffff55] dark:hover:border-[#ffffff44] 
           absolute bottom-0 ${isOpen ? `-left-full` : `left-0`}`}
           onClick={() => setIsOpen(true)}
         >
@@ -105,15 +106,15 @@ export const CommentForm = ({ slug }) => {
             autoFocus={false}
           />
           <Textarea
-            className={`max-w-full h-full sm:row-start-1 sm:row-end-3 sm:col-start-2 sm:col-end-4 bg-transparent rounded-xl \
-              resize-none overflow-auto p-4 border-2 \
+            className={`max-w-full h-full sm:row-start-1 sm:row-end-3 sm:col-start-2 sm:col-end-4 bg-transparent rounded-xl 
+              resize-none overflow-auto p-4 border-2 
               border-[#E4E4E7] dark:border-[#1a1a1d] dark:border-[#ffffff22] row-span-2 sm:row-span-1`}
             value={formData.text}
             onChange={(e) => changeFormDataHandler(e)}
           />
           <button
-            className={`flex items-center justify-center text-white bg-[#1a1a1d] rounded-xl border-3 border-transparent \ 
-            sm:row-start-1 sm:row-end-2 hover:bg-transparent hover:text-[#1a1a1d] \
+            className={`flex items-center justify-center text-white bg-[#1a1a1d] rounded-xl border-3 border-transparent
+            sm:row-start-1 sm:row-end-2 hover:bg-transparent hover:text-[#1a1a1d] 
             hover:border-3 hover:border-[#1a1a1d] duration-500
             dark:bg-[#ffffff22] dark:hover:text-[#888] dark:hover:border-[#ffffff33] py-4 sm:p-0`}
             onClick={() => sendCommentHandler()}
@@ -125,8 +126,8 @@ export const CommentForm = ({ slug }) => {
             )}
           </button>
           <button
-            className={`flex items-center justify-center text-white rounded-xl bg-[#C62128] border-3 border-transparent \ 
-            sm:row-start-2 sm:row-end-3 hover:bg-transparent hover:text-[#C62128] \
+            className={`flex items-center justify-center text-white rounded-xl bg-[#C62128] border-3 border-transparent  
+            sm:row-start-2 sm:row-end-3 hover:bg-transparent hover:text-[#C62128] 
             hover:border-3 hover:border-[#C62128] duration-500
             dark:bg-[#C62128] dark:hover:text-[#ffffff55] dark:hover:border-[#ffffff44] py-4 sm:p-0`}
             onClick={() => discardHandler()}

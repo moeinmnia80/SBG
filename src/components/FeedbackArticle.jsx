@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import { CommentIcon } from "../assets/icons/CommentIcon.jsx";
 import { HeartIcon } from "../assets/icons/HeartIcon.jsx";
 import { useState } from "react";
 import { ClipboardIcon } from "../assets/icons/ClipboardIcon.jsx";
 
-export const FeedbackArticle = ({ title, slug }) => {
+export const FeedbackArticle = ({ slug }) => {
   const [liked, setLiked] = useState(false);
   const BASE_URL = `https://scorpionbitesgroup.vercel.app`;
   return (

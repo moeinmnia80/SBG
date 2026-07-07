@@ -1,4 +1,4 @@
-export const TagIcon = ({ style }) => {
+export const TagIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -7,7 +7,7 @@ export const TagIcon = ({ style }) => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className={`${style}`}
+        {...props}
       >
         <path
           strokeLinecap="round"

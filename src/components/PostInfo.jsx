@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { ClockIcon } from "../assets/icons/ClockIcon.jsx";
 import { TagIcon } from "../assets/icons/TagIcon.jsx";
 import { AcademicIcon } from "../assets/icons/AcademicIcon.jsx";

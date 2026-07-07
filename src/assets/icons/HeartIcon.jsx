@@ -1,4 +1,5 @@
-export const HeartIcon = ({ style, clickedHandler }) => {
+// eslint-disable-next-line react/prop-types
+export const HeartIcon = ({ clickedHandler, ...props }) => {
   return (
     <>
       <button onClick={clickedHandler}>
@@ -8,7 +9,7 @@ export const HeartIcon = ({ style, clickedHandler }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className={`${style}`}
+          {...props}
         >
           <path
             strokeLinecap="round"

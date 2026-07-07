@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { toast } from "react-toastify";
 
 const tabHandler = (topic) => {
@@ -66,7 +65,7 @@ const copyFromCodeTag = () => {
     const content = e.target.innerText;
     navigator.clipboard
       .writeText(`${content}`)
-      .then((res) =>
+      .then(() =>
         toast.success("copied!", { position: "top-center", theme: "dark" }),
       );
   };

@@ -2,12 +2,12 @@ export const ServiceCard = ({ service }) => {
   return (
     <div className={`group/cart relative w-full h-full`}>
       <span
-        className={`absolute flex w-full h-full \
-        top-2 -left-2 border-[1px] border-[#1a1a1d] \
+        className={`absolute flex w-full h-full 
+        top-2 -left-2 border-[1px] border-[#1a1a1d] 
         bg-[#1a1a1d] dark:bg-[#ffffff22] dark:border-[#eee] rounded-md`}
       />
       <div
-        className={`flex relative w-full h-full border-1 border-[#1a1a1d] \
+        className={`flex relative w-full h-full border-1 border-[#1a1a1d] 
         rounded-md bg-white overflow-hidden dark:bg-secondary`}
       >
         <div className={`services-card-selector-right`} />

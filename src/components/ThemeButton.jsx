@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { MoonIcon } from "../assets/icons/MoonIcon.jsx";
 import { SunIcon } from "../assets/icons/SunIcon.jsx";
 import { useDispatch } from "react-redux";
@@ -15,14 +16,14 @@ export const ThemeButton = ({ isDark, setIsDark, style }) => {
       >
         <div
           className={`relative w-14 h-7 bg-[#eee] dark:bg-[#C62128] rounded-full cursor-pointer`}
-          onClick={(e) =>
+          onClick={() =>
             themeSwitchHandler(isDark, setIsDark, dispatch, changeTheme)
           }
         >
           <div
             className={`absolute top-1 ${
               isDark ? `left-8` : `left-1`
-            } flex items-center justify-center w-5 h-5 shadow-xl \
+            } flex items-center justify-center w-5 h-5 shadow-xl
                  bg-white dark:bg-[#1a1a1d] rounded-full transition-all duration-500`}
           >
             {isDark ? (

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { DateIcon } from "../assets/icons/DateIcon.jsx";
 
 export const CommentUserInfo = ({ comment }) => {

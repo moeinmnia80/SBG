@@ -13,21 +13,21 @@ export const NavbarBlog = () => {
   return (
     <>
       <nav
-        className={`sticky top-0 flex items-center justify-center w-full h-20 border-b-[1px] border-[#00000011] \ 
+        className={`sticky top-0 flex items-center justify-center w-full h-20 border-b-[1px] border-[#00000011] 
         bg-[#ffffff22] dark:bg-[#00000022] dark:border-[#ffffff22] backdrop-blur-xl pr-8 pl-6 sm:p-0 z-20`}
       >
         <section className={`container flex items-center justify-between`}>
           <div className={`flex items-center justify-center w-max`}>
             <button
               onClick={() => navigate(-1)}
-              className={`hidden sm:flex p-2 hover:bg-[#eee] rounded-full duration-500 \
+              className={`hidden sm:flex p-2 hover:bg-[#eee] rounded-full duration-500 
               dark:hover:bg-[#ffffff22]`}
             >
               <LeftArrow style={`w-5 h-5`} />
             </button>
             <Link
               to={`/`}
-              className={`flex p-2 hover:bg-[#eee] rounded-full ml-2 duration-500 \ 
+              className={`flex p-2 hover:bg-[#eee] rounded-full ml-2 duration-500  
               dark:hover:bg-[#ffffff22]`}
             >
               <HomeIcon style={`w-5 h-5`} />

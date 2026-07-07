@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 // tailwind.config.js
-const { nextui } = require("@nextui-org/theme");
+import { nextui } from "@nextui-org/theme";
 export default {
   content: [
     "./index.html",

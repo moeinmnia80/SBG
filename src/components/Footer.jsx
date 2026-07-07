@@ -29,7 +29,7 @@ export const Footer = () => {
       <section className={`relative w-full h-64 sm:h-36 bg-[#eee] px-8`}>
         <Container className={`container relative h-full`}>
           <Contact
-            className={`flex flex-col md:flex-row items-center justify-between \
+            className={`flex flex-col md:flex-row items-center justify-between 
              w-full md:h-16 bg-[#1a1a1d] rounded-xl p-2 md:px-2 text-[#eee] dark:border-[1px] dark:border-[#eee]`}
           >
             <div className={`flex flex-col sm:flex-row w-full md:w-1/2 gap-2`}>
@@ -57,14 +57,14 @@ export const Footer = () => {
                 value={emailData.message}
                 name={`message`}
                 placeholder={`About`}
-                className={`w-full md:w-1/3 lg:focus:w-2/3 h-12 bg-[#ffffff44] p-2 outline-none rounded-md text-sm \ 
+                className={`w-full md:w-1/3 lg:focus:w-2/3 h-12 bg-[#ffffff44] p-2 outline-none rounded-md text-sm 
                 duration-500 placeholder:text-[#eee]`}
                 onChange={(e) => changeEmailDataHandler(e)}
                 autoFocus={false}
               />
             </div>
             <button
-              className={`w-full md:w-32 h-12 bg-[#eee] font-bold text-black hover:bg-white dark:text-[#1a1a1d] py-2 \
+              className={`w-full md:w-32 h-12 bg-[#eee] font-bold text-black hover:bg-white dark:text-[#1a1a1d] py-2
               duration-500 rounded-md text-sm mt-2 md:m-0`}
               onClick={() => setIsOpen((isOpen) => !isOpen)}
             >

@@ -25,7 +25,7 @@ const Articles = styled.div`
   height: max-content;
 `;
 export const Article = () => {
-  const { loading, data, error } = useQuery(GET_BLOGS);
+  const { loading, data } = useQuery(GET_BLOGS);
   return (
     <>
       <Element name={`articles`} id={`articles`}>
@@ -44,8 +44,8 @@ export const Article = () => {
               />
               <Link
                 to={`articles`}
-                className={`hidden sm:flex px-8 py-1 border-[1px] border-[#1a1a1d] rounded-md \ 
-                hover:bg-[#1a1a1d] hover:text-white text-center \
+                className={`hidden sm:flex px-8 py-1 border-[1px] border-[#1a1a1d] rounded-md
+                hover:bg-[#1a1a1d] hover:text-white text-center 
                 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-[#1a1a1d] \
                 duration-300`}
               >

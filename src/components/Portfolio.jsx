@@ -31,13 +31,13 @@ export const Portfolio = () => {
         <section className={`to-up w-full h-full`}>
           <div className={`container relative flex items-center h-[80svh]`}>
             <div
-              className={`absolute left-1/2 -translate-x-1/2 \ 
-            w-1/2 -top-6 hover:-top-14 \
-            sm:-top-12 sm:hover:-top-20 \
-            md:w-1/4 md:-top-8 md:hover:-top-14 \
+              className={`absolute left-1/2 -translate-x-1/2 
+            w-1/2 -top-6 hover:-top-14 
+            sm:-top-12 sm:hover:-top-20 
+            md:w-1/4 md:-top-8 md:hover:-top-14 
             lg:-top-10 lg:hover:-top-16
-            xl:w-1/5 xl:-top-10 xl:hover:-top-16 \
-            2xl:-top-8 2xl:hover:-top-16 \ 
+            xl:w-1/5 xl:-top-10 xl:hover:-top-16 
+            2xl:-top-8 2xl:hover:-top-16 
             duration-500`}
             >
               <img
@@ -57,7 +57,7 @@ export const Portfolio = () => {
                   </iframe>
                 ) : (
                   <div
-                    className={`flex items-center justify-center w-full h-[calc(100%-3rem)] \
+                    className={`flex items-center justify-center w-full h-[calc(100%-3rem)] 
                   bg-white dark:bg-[#1a1a1d] dark:text-white`}
                   >
                     <p

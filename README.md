@@ -22,7 +22,7 @@ ScorpionBitesGroup is a portfolio site built to present a curated collection of 
 - **Framework:** React
 - **Framework:** Hygraph - graphql
 - **Styling:** Tailwind CSS - styled-component
-- **Deployment:** Vercel<img width="2559" height="1167" alt="Screenshot 2026-07-16 210655" src="https://github.com/user-attachments/assets/4699d6fc-0dba-4849-8012-4d0171334d71" />
+- **Deployment:** Vercel
 
 
 ## Getting Started
